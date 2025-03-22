@@ -1,0 +1,4 @@
+packages:
+  - "src"       # Include your source folder
+  - "public"    # Include public folder (if applicable)
+  - "."         # Include the root project

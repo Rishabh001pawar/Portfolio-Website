@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@tailwind base;
+@import "tailwindcss/preflight";
 @tailwind utilities;
 
 /* Smooth Theme Transition */
