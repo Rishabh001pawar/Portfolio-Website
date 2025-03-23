@@ -1,8 +1,8 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  base: '/Portfolio-Website/', // Correct base path for GitHub Pages
+  base: '', // Leave this empty for Vercel
   build: {
-    outDir: 'dist', // Use 'dist' as the default output directory
+    outDir: 'dist', // Output directory
   },
 });
