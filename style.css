@@ -7,11 +7,6 @@ body {
     transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-#backgroundCanvas {
-    background: url('gallery/star.jpg') no-repeat center center/cover;
-    transition: background 1s ease-in-out; /* Smooth transition */
-}
-
 /* Dark Mode Styles */
 .dark {
     background: #121212;

@@ -1,19 +1,18 @@
-// 🌗 Dark Mode Toggle
-const toggleButton = document.getElementById("darkModeToggle");
-const body = document.body;
-
-// Apply saved theme on load
 document.addEventListener("DOMContentLoaded", () => {
-    const savedTheme = localStorage.getItem("theme") || "light";
-    body.classList.toggle("dark", savedTheme === "dark");
-    toggleButton.textContent = savedTheme === "dark" ? "☀️" : "🌙";
-});
+    const toggleButton = document.getElementById("darkModeToggle");
+    
+    if (toggleButton) {  // Null check
+        const body = document.body;
+        const savedTheme = localStorage.getItem("theme") || "light";
+        body.classList.toggle("dark", savedTheme === "dark");
+        toggleButton.textContent = savedTheme === "dark" ? "☀️" : "🌙";
 
-// Toggle mode and save preference
-toggleButton.addEventListener("click", () => {
-    const isDark = body.classList.toggle("dark");
-    toggleButton.textContent = isDark ? "☀️" : "🌙";
-    localStorage.setItem("theme", isDark ? "dark" : "light");
+        toggleButton.addEventListener("click", () => {
+            const isDark = body.classList.toggle("dark");
+            toggleButton.textContent = isDark ? "☀️" : "🌙";
+            localStorage.setItem("theme", isDark ? "dark" : "light");
+        });
+    }
 });
 
 // 🎯 Button Click Handlers with Existence Check
