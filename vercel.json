@@ -1,0 +1,10 @@
+{
+    "public": "public",
+    "rewrites": [
+      {
+        "source": "/gallery/:path*",
+        "destination": "/public/gallery/:path*"
+      }
+    ]
+  }
+  
