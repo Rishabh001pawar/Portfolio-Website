@@ -10,7 +10,7 @@ resizeCanvas();
 window.addEventListener("resize", resizeCanvas);
 
 const particles = [];
-const numParticles = 1500;  // More particles for dense effect
+const numParticles = 2000;  // More particles for dense effect
 const mouse = { x: null, y: null };
 
 // Mouse tracking
