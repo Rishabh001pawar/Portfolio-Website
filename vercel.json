@@ -1,14 +1,8 @@
 {
     "version": 2,
     "public": "public",
-    "builds": [
-      {
-        "src": "public/gallery/*",
-        "use": "@vercel/static"
-      }
-    ],
-    "routes": [
-      { "src": "/gallery/(.*)", "dest": "/public/gallery/$1" }
+    "rewrites": [
+      { "source": "/gallery/(.*)", "destination": "/public/gallery/$1" }
     ]
   }
   
