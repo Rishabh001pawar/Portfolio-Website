@@ -6,46 +6,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.min.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@babel/standalone@7.20.6/babel.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
-  <script type="module" crossorigin src="./assets/index-Bpzn538H.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-Bd_29Ssa.css">
+  <script type="module" crossorigin src="/assets/index-79N2oQ96.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-BvUPu8Lp.css">
 </head>
 
-<body class="bg-gradient-to-r from-[#0F172A] to-[#8B5CF6] text-white transition-all duration-500">
+
+<body class="bg-gradient-to-r from-[#111827] via-[#3730A3] to-[#7C3AED]
+text-white transition-all duration-500">
 
     <canvas id="backgroundCanvas" class="fixed top-0 left-0 w-full h-full -z-10"></canvas>
 
-    <!-- Navbar -->
-    <nav class="fixed top-0 left-0 w-full z-50 bg-opacity-90  flex justify-between items-center px-6 py-4">
+    
+    <nav class="fixed top-0 left-0 w-full z-50 bg-opacity-90 flex justify-between items-center px-3 py-2"
+        style="background: linear-gradient(to right, #2c003e, #001f3f);">
         <h1 class="text-2xl font-bold">Portfolio</h1>
-
-        <!-- Navbar Links -->
         <ul class="hidden md:flex gap-10 text-m">
-            <li><a href="#home" class="relative font-semibold transition-all duration-300 hover:text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">Home</a></li>
-            <li><a href="#about" class="relative font-semibold transition-all duration-300 hover:text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">About</a></li>
-            <li><a href="#skills" class="relative font-semibold transition-all duration-300 hover:text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">Skills</a></li>
-            <li><a href="#projects" class="relative font-semibold transition-all duration-300 hover:text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">Projects</a></li>
-            <li><a href="#achievements" class="relative font-semibold transition-all duration-300 hover:text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">Achievements</a></li>
-            <li><a href="#gallery" class="relative font-semibold transition-all duration-300 hover:text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">Gallery</a></li>
-            <li><a href="#contact" class="relative font-semibold transition-all duration-300 hover:text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">Contact</a></li>
+            <li><a href="#home"
+                    class="relative font-semibold transition-all duration-300 hover:text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">Home</a>
+            </li>
+            <li><a href="#about"
+                    class="relative font-semibold transition-all duration-300 hover:text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">About</a>
+            </li>
+            <li><a href="#skills"
+                    class="relative font-semibold transition-all duration-300 hover:text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">Skills</a>
+            </li>
+            <li><a href="#projects"
+                    class="relative font-semibold transition-all duration-300 hover:text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">Projects</a>
+            </li>
+            <li><a href="#achievements"
+                    class="relative font-semibold transition-all duration-300 hover:text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">Achievements</a>
+            </li>
+            <li><a href="#gallery"
+                    class="relative font-semibold transition-all duration-300 hover:text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">Gallery</a>
+            </li>
+            <li><a href="#contact"
+                    class="relative font-semibold transition-all duration-300 hover:text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">Contact</a>
+            </li>
         </ul>
-        
 
-        <!-- Mobile Menu -->
-        <button id="menu-btn" class="md:hidden text-2xl">
-            ☰
-        </button>
-
-        <!-- Dark Mode Toggle -->
+        <button id="menu-btn" class="md:hidden text-2xl">☰</button>
         <button id="darkModeToggle" class="bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-gray-700 transition">
             🌙
         </button>
     </nav>
 
-    <!-- Mobile Menu Content -->
-    <div id="mobile-menu" class="hidden flex flex-col items-center gap-4 bg-[#0A192F] text-white py-6">
+    
+    <div id="mobile-menu" class=" hidden flex flex-col items-center gap-4 bg-[#0A192F] text-white py-6">
         <a href="#home" class="hover:text-yellow-300 font-semibold">Home</a>
         <a href="#about" class="hover:text-yellow-300 font-semibold">About</a>
         <a href="#skills" class="hover:text-yellow-300 font-semibold">Skills</a>
@@ -55,726 +74,1195 @@
         <a href="#contact" class="hover:text-yellow-300 font-semibold">Contact</a>
     </div>
 
-    <!-- Main Content -->
-    <section id="home" class="grid lg:grid-cols-2 md:grid-cols-1 items-center container mx-auto min-h-screen px-20">
-        
-        <!-- Left Section -->
-        <div class="text-left">
-            <h1 class="text-6xl font-bold text-[#b0c4de]">Rishabh Farkade</h1>
-            <h2 class="text-lg mt-2">Software Engineer at <span class="text-yellow-400">(?)</span></h2>
-
-            <!-- Badges -->
-            <div class="mt-5 flex gap-3 flex-wrap">
-                <span class="bg-blue-500 px-5 py-1 rounded-full text-sm">SDE</span>
-                <span class="bg-yellow-500 px-5 py-1 rounded-full text-sm">Web Developer</span>
-                <span class="bg-green-500 px-5 py-1 rounded-full text-sm">DSA</span>
-                <span class="bg-red-500 px-5 py-1 rounded-full text-sm">Cyber Security</span>
-            </div>
-
-            <!-- Social Icons -->
-            <div class="mt-6 flex gap-4">
-                <a href="https://www.linkedin.com/in/rishabh-farkade-91600a263"
-                    class="text-2xl text-blue-400 hover:text-black transition" title="LinkedIn">
-                    <i data-feather="linkedin"></i>
-                </a>
-                <a href="https://github.com/Rishabh001pawar"
-                    class="text-2xl text-blue-400 hover:text-black transition" title="GitHub">
-                    <i data-feather="github"></i>
-                </a>
-                <a href="https://twitter.com/rishabh_twitter"
-                    class="text-2xl text-blue-400 hover:text-black transition" title="Twitter">
-                    <i data-feather="twitter"></i>
-                </a>
-                <a href="https://www.instagram.com/_rishabh007_/"
-                    class="text-2xl text-blue-400 hover:text-black transition" title="Instagram">
-                    <i data-feather="instagram"></i>
-                </a>
-                <a href="https://leetcode.com/u/Rishabh007_/"
-                    class="text-2xl text-blue-400 hover:text-black transition" title="Leetcode">
-                    <i data-feather="code"></i>
-                </a>
-            </div>
-
-            <!-- Buttons -->
-            <div class="mt-5 flex gap-4">
-                <a href="#projects"
-                    class="bg-gradient-to-r from-purple-600 to-indigo-600 px-6 py-3 rounded-xl text-white font-medium shadow-lg hover:scale-105">
-                    🚀 Explore My Work
-                </a>
-                <a href="/Rishabh Resume.pdf"
-                    class="bg-gray-800 px-6 py-3 rounded-xl text-white font-medium shadow-lg hover:scale-105"
-                    target="_blank">
-                    📄 Resume
-                </a>
-            </div>
-        </div>
-
-        <!-- Right Section -->
-        <div class="flex justify-center items-center h-screen ">
-            <img src="./assets/profile-ar5YmYmN.jpg" alt="Profile picture of Rishabh Farkade"
-                class="rounded-lg shadow-lg object-cover w-96 h-96 transition-transform duration-300 hover:scale-110 hover:shadow-2xl">
-        </div>
-        
-        
-
-    <script>
-        feather.replace();
-
-        // Dark Mode Toggle with Local Storage
-        const toggleBtn = document.getElementById('darkModeToggle');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const menuBtn = document.getElementById('menu-btn');
-
-        toggleBtn.addEventListener('click', () => {
-            document.body.classList.toggle('bg-gray-900');
-            document.body.classList.toggle('text-white');
-            localStorage.setItem('darkMode', document.body.classList.contains('bg-gray-900'));
-        });
-
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Persist dark mode
-        if (localStorage.getItem('darkMode') === 'true') {
-            document.body.classList.add('bg-gray-900', 'text-white');
-        }
-    </script>
-
-
-    </section>
-
-    <div class="bg-gradient-to-r from-[#0b0b1d]/80 to-[#1b1b47]/70 text-white">
-        <section id="about" class="min-h-screen text-center py-6">
-            <header class="text-center p-6">
-                <span class="bg-purple-600 px-6 py-2 rounded-full text-white font-semibold shadow-lg">
-                    About.me()
-                </span>
-            </header>
-
-
-            <div class="text-center py-4">
-                <h1
-                    class="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">
-                    GrInDiNg BrEw InTo BrIlLiAnCe
+    
+        <section id="home"
+            class="grid lg:grid-cols-2 grid-cols-1 items-center container mx-auto min-h-screen px-4 sm:px-6 md:px-10 lg:px-20 py-16">
+            <div class="text-left order-2 lg:order-1 mt-8 lg:mt-0">
+                <h1 id="profile-name" class="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#b0c4de] animate-text">
                 </h1>
-                <p class="text-lg text-gray-400 mt-2">AnD SpArKs InTo <span
-                        class="text-blue-400 font-semibold">SuCcEsS</span></p>
+                <h2 id="profile-title" class="text-base sm:text-lg mt-2 animate-text" style="animation-delay: 0.2s;">
+                </h2>
+                <div id="profile-tags" class="mt-5 flex gap-3 flex-wrap"></div>
+                <div id="social-links" class="mt-6 flex gap-4"></div>
+                <div class="mt-5 flex gap-4">
+                    <a href="#projects"
+                        class="pulse-button px-4 sm:px-6 py-2 sm:py-3 rounded-xl text-sm sm:text-base font-medium shadow-lg hover:scale-105 transition-transform">🚀
+                        Explore My Work</a>
+                    <a id="resume-link" href="Rishabh_Resume.pdf"
+                        class="bg-gray-800 px-4 sm:px-6 py-2 sm:py-3 rounded-xl text-sm sm:text-base font-medium shadow-lg hover:scale-105 transition-transform">📄
+                        Resume</a>
+                </div>
             </div>
+            <div class="flex justify-center items-center order-1 lg:order-2">
+                <img id="profile-image" src="/assets/profile-ar5YmYmN.jpg" alt="Profile picture"
+                    class="rounded-lg shadow-lg object-cover w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 animate-image image-hover">
+            </div>
+        </section>
 
-            <section id="about" class="max-w-7xl mx-auto px-10 py-8">
-                <div class="grid md:grid-cols-2 gap-10 items-center">
+        
+        <script id="profile-data" type="application/json">
+            {
+                "name": "Rishabh Farkade",
+                "title": "Software Engineer",
+                "company": "(?)",
+                "tags": [
+                    { "label": "SDE", "color": "bg-blue-500" },
+                    { "label": "Web Developer", "color": "bg-yellow-500" },
+                    { "label": "DSA", "color": "bg-green-500" },
+                    { "label": "Cyber Security", "color": "bg-red-500" }
+                ],
+                "socialLinks": [
+                    { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/rishabh-farkade-91600a263", "icon": "linkedin" },
+                    { "platform": "GitHub", "url": "https://github.com/Rishabh001pawar", "icon": "github" },
+                    { "platform": "Twitter", "url": "https://twitter.com/rishabh_twitter", "icon": "twitter" },
+                    { "platform": "Instagram", "url": "https://www.instagram.com/_rishabh007_/", "icon": "instagram" },
+                    { "platform": "Leetcode", "url": "https://leetcode.com/u/Rishabh007_/", "icon": "code" }
+                ]
+            }
+            </script>
 
-                    <!-- Left Section: About Text -->
-                    <div class="space-y-10">
-                        <p class="text-gray-300 leading-relaxed">
-                            I'm <span class="text-yellow-400 font-bold">Rishabh Farkade</span>, Aspiring 
-                            <span class="text-blue-400 font-bold">Software Engineer</span> with experience in 
-                            <span class="text-purple-400 font-bold">computer science model development</span> and 
-                            <span class="text-pink-400 font-bold">open-source contributions</span>. 
-                            Proficient in <span class="text-yellow-400 font-bold">Java</span> and 
-                            <span class="text-orange-400 font-bold">Python</span> with a solid foundation in 
-                            <span class="text-green-400 font-bold">data structures and algorithms</span>. 
-                            Passionate about leveraging <span class="text-blue-400 font-bold">software development</span> and 
-                            <span class="text-red-400 font-bold">cybersecurity</span> to drive innovation, build robust solutions, 
-                            and enhance security. 
-                            Eager to collaborate on impactful projects and continuously expand technical expertise.
-                        </p>
-                        
+        <script>
+            
+            function renderHomeSection() {
+                try {
+                   
+                    const profileDataElement = document.getElementById('profile-data');
+                    const profileData = JSON.parse(profileDataElement.textContent);
 
-                        <p class="text-gray-300">
-                            During my <span class="text-blue-400 font-bold">Cisco Networking Virtual Internship</span>,
-                            I gained expertise in IP addressing, subnetting, routing, and security protocols such as
-                            firewalls and VPNs.
-                        </p>
+                    
+                    document.getElementById('profile-name').textContent = profileData.name;
+                    document.getElementById('profile-title').innerHTML = `Software Engineer at <span class="text-yellow-400">${profileData.company}</span>`;
 
-                        <p class="text-gray-300 leading-relaxed">
-                            As a <span class="text-yellow-400 font-bold">Mentor at GDSC</span>, 
-                            guiding students in <span class="text-red-400 font-bold">AI</span> through GenAI Study Jams, 
-                            fostering <span class="text-blue-400 font-bold">collaboration</span> and 
-                            <span class="text-pink-600 font-bold">knowledge sharing</span>. 
-                            As <span class="text-pink-400 font-bold">President of E-Cell</span>, 
-                            I organized workshops and competitions, boosting event participation
-                            and strengthening the startup culture. 
-                            My analytical and <span class="text-orange-800 font-bold">problem solving Skills</span> earned my E-cell team spot as a 
-                            <span class="text-green-400 font-bold">NEC IIT Bombay finalist</span>, showcasing my innovative mindset.
-                        </p>
-                        
+                    
+                    const tagsContainer = document.getElementById('profile-tags');
+                    tagsContainer.innerHTML = profileData.tags.map((tag, index) => `
+        <span class="${tag.color} px-4 py-1 rounded-full text-xs sm:text-sm animate-tag tag-hover" style="animation-delay: ${0.3 + index * 0.1}s">${tag.label}</span>
+    `).join('');
+
+                   
+                    const socialContainer = document.getElementById('social-links');
+                    socialContainer.innerHTML = profileData.socialLinks.map((link, index) => `
+        <a href="${link.url}" class="text-2xl text-blue-400 hover:text-purple-500 animate-social social-hover" title="${link.platform}" style="animation-delay: ${0.5 + index * 0.1}s">
+            <i data-feather="${link.icon}"></i>
+        </a>
+    `).join('');
+
+                    
+                    feather.replace();
+                } catch (error) {
+                    console.error('Error rendering home section:', error);
+                
+                    document.getElementById('profile-name').textContent = 'Error Loading Profile';
+                }
+            }
+
+           
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            
+            const toggleBtn = document.getElementById('darkModeToggle');
+            toggleBtn.addEventListener('click', () => {
+                document.body.classList.toggle('bg-gray-900');
+                document.body.classList.toggle('text-white');
+                localStorage.setItem('darkMode', document.body.classList.contains('bg-gray-900'));
+            });
+
+         
+            if (localStorage.getItem('darkMode') === 'true') {
+                document.body.classList.add('bg-gray-900', 'text-white');
+            }
+
+        
+            renderHomeSection();
+        </script>
+
+        <div class="bg-gradient-to-r from-[#0b0b1d]/80 to-[#1b1b47]/70 text-white">
+
+            <section id="about" class="min-h-screen text-center py-6">
+                <header class="text-center p-6">
+                    <span class="bg-purple-600 px-6 py-2 rounded-full text-white font-semibold shadow-lg neon-glow">
+                        About.me()
+                    </span>
+                </header>
+
+                <div class="text-center py-4">
+                    <h1 id="typing-heading"
+                        class="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400 flicker">
+                        GrInDiNg BrEw InTo BrIlLiAnCe
+                    </h1>
+                    <p class="text-lg text-gray-400 mt-2">AnD SpArKs InTo <span
+                            class="text-blue-400 font-semibold">SuCcEsS</span></p>
+                </div>
+
+                <section class="max-w-7xl mx-auto px-10 py-8 relative">
+                    <!-- Particle Background -->
+                    <div id="particles-js" class="absolute inset-0 z-0"></div>
+
+                    <div class="grid md:grid-cols-2 gap-10 items-center relative z-10">
+                        <!-- Left Section: About Text -->
+                        <div class="space-y-10">
+                            <p class="text-gray-300 leading-relaxed animate-paragraph">
+                                I'm <span class="text-yellow-400 font-bold color-shift">Rishabh Farkade</span>, Aspiring
+                                <span class="text-blue-400 font-bold color-shift">Software Engineer</span> with
+                                experience
+                                in
+                                <span class="text-purple-400 font-bold color-shift">computer science model
+                                    development</span> and
+                                <span class="text-pink-400 font-bold color-shift">open-source contributions</span>.
+                                Proficient in <span class="text-yellow-400 font-bold color-shift">Java</span> and
+                                <span class="text-orange-400 font-bold color-shift">Python</span> with a solid
+                                foundation in
+                                <span class="text-green-400 font-bold color-shift">data structures and
+                                    algorithms</span>.
+                                Passionate about leveraging <span class="text-blue-400 font-bold color-shift">software
+                                    development</span> and
+                                <span class="text-red-400 font-bold color-shift">cybersecurity</span> to drive
+                                innovation,
+                                build robust solutions,
+                                and enhance security.
+                                Eager to collaborate on impactful projects and continuously expand technical expertise.
+                            </p>
+
+                            <p class="text-gray-300 animate-paragraph">
+                                During my <span class="text-blue-400 font-bold color-shift">Cisco Networking Virtual
+                                    Internship</span>,
+                                I gained expertise in IP addressing, subnetting, routing, and security protocols such as
+                                firewalls and VPNs.
+                            </p>
+
+                            <p class="text-gray-300 leading-relaxed animate-paragraph">
+                                As a <span class="text-yellow-400 font-bold color-shift">Mentor at GDSC</span>,
+                                guiding students in <span class="text-red-400 font-bold color-shift">AI</span> through
+                                GenAI
+                                Study Jams,
+                                fostering <span class="text-blue-400 font-bold color-shift">collaboration</span> and
+                                <span class="text-pink-600 font-bold color-shift">knowledge sharing</span>.
+                                As <span class="text-pink-400 font-bold color-shift">President of E-Cell</span>,
+                                I organized workshops and competitions, boosting event participation
+                                and strengthening the startup culture.
+                                My analytical and <span class="text-orange-800 font-bold color-shift">problem solving
+                                    Skills</span>
+                                earned my E-cell team spot as a
+                                <span class="text-green-400 font-bold color-shift">NEC IIT Bombay finalist</span>,
+                                showcasing my innovative mindset.
+                            </p>
+
+
+                        </div>
+
+                        <!-- Right Section: Flip Cards -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <!-- Card 1 -->
+                            <div class="flip-card animate-on-scroll neon-glow">
+                                <div class="flip-card-inner relative w-full h-48">
+                                    <div
+                                        class="flip-card-front absolute inset-0 bg-[#1a1a3a] p-6 rounded-lg shadow-lg transition-transform hover:scale-105">
+                                        <div class="flex items-center gap-2 mb-3">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                stroke-width="1.5" stroke="currentColor" class="size-6">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
+                                            </svg>
+                                            <h3 class="text-yellow-400 font-semibold">Code Maestro</h3>
+                                        </div>
+                                        <p class="text-gray-400">Brewing elegant code solutions with the magic of
+                                            Coding.
+                                        </p>
+                                    </div>
+                                    <div
+                                        class="flip-card-back absolute inset-0 bg-gradient-to-br from-purple-500 to-blue-500 p-6 rounded-lg shadow-lg flex items-center justify-center">
+                                        <p class="text-white text-center">const rhythm = "clean code 🎼";
+                                            <br>const flow = "smooth logic 🎶";
+                                            <br>console.log(`Code Maestro: ${rhythm} + ${flow} = harmony 🚀`);
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 2 -->
+                            <div class="flip-card animate-on-scroll neon-glow">
+                                <div class="flip-card-inner relative w-full h-48">
+                                    <div
+                                        class="flip-card-front absolute inset-0 bg-[#1a1a3a] p-6 rounded-lg shadow-lg transition-transform hover:scale-105">
+                                        <div class="flex items-center gap-2 mb-3">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                stroke-width="1.5" stroke="currentColor" class="size-6">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M5.25 14.25h13.5m-13.5 0a3 3 0 0 1-3-3m3 3a3 3 0 1 0 0 6h13.5a3 3 0 1 0 0-6m-16.5-3a3 3 0 0 1 3-3h13.5a3 3 0 0 1 3 3m-19.5 0a4.5 4.5 0 0 1 .9-2.7L5.737 5.1a3.375 3.375 0 0 1 2.7-1.35h7.126c1.062 0 2.062.5 2.7 1.35l2.587 3.45a4.5 4.5 0 0 1 .9 2.7m0 0a3 3 0 0 1-3 3m0 3h.008v.008h-.008v-.008Zm0-6h.008v.008h-.008v-.008Zm-3 6h.008v.008h-.008v-.008Zm0-6h.008v.008h-.008v-.008Z" />
+                                            </svg>
+                                            <h3 class="text-cyan-300 font-semibold">Algorithm Whisperer</h3>
+                                        </div>
+                                        <p class="text-gray-300">Addressing complex challenges with refined solutions.
+                                        </p>
+                                    </div>
+                                    <div
+                                        class="flip-card-back absolute inset-0 bg-gradient-to-br from-blue-500 to-green-500 p-6 rounded-lg shadow-lg flex items-center justify-center">
+                                        <p class="text-white text-center">const idea = "💡";
+                                            <br>const magic = idea + " + creativity = 🔥";
+                                            <br>console.log("Innovation Alchemist: " + magic);
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 3 -->
+                            <div class="flip-card animate-on-scroll neon-glow">
+                                <div class="flip-card-inner relative w-full h-48">
+                                    <div
+                                        class="flip-card-front absolute inset-0 bg-[#1a1a3a] p-6 rounded-lg shadow-lg transition-transform hover:scale-105">
+                                        <div class="flex items-center gap-2 mb-3">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                stroke-width="1.5" stroke="currentColor" class="size-6">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M15.59 14.37a6 6 0 0 1-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 0 0 6.16-12.12A14.98 14.98 0 0 0 9.631 8.41m5.96 5.96a14.926 14.926 0 0 1-5.841 2.58m-.119-8.54a6 6 0 0 0-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 0 0-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 0 1-2.448-2.448 14.9 14.9 0 0 1 .06-.312m-2.24 2.39a4.493 4.493 0 0 0-1.757 4.306 4.493 4.493 0 0 0 4.306-1.758M16.5 9a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z" />
+                                            </svg>
+                                            <h3 class="text-yellow-400 font-semibold">Innovation Alchemist</h3>
+                                        </div>
+                                        <p class="text-gray-300">Turning ideas into exceptional solutions.</p>
+                                    </div>
+                                    <div
+                                        class="flip-card-back absolute inset-0 bg-gradient-to-br from-pink-500 to-orange-500 p-6 rounded-lg shadow-lg flex items-center justify-center">
+                                        <p class="text-white text-center">const spark = "💡";
+                                            <br> const catalyst = "curiosity";
+                                            <br>const creation = `${spark} + ${catalyst} = ✨ innovation`;
+                                            <br>console.log("Innovation Alchemist:", creation);
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 4 -->
+                            <div class="flip-card animate-on-scroll neon-glow">
+                                <div class="flip-card-inner relative w-full h-48">
+                                    <div
+                                        class="flip-card-front absolute inset-0 bg-[#1a1a3a] p-6 rounded-lg shadow-lg transition-transform hover:scale-105">
+                                        <div class="flex items-center gap-2 mb-3">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                fill="currentColor" class="size-6">
+                                                <path fill-rule="evenodd"
+                                                    d="M5.166 2.621v.858c-1.035.148-2.059.33-3.071.543a.75.75 0 0 0-.584.859 6.753 6.753 0 0 0 6.138 5.6 6.73 6.73 0 0 0 2.743 1.346A6.707 6.707 0 0 1 9.279 15H8.54c-1.036 0-1.875.84-1.875 1.875V19.5h-.75a2.25 2.25 0 0 0-2.25 2.25c0 .414.336.75.75.75h15a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-2.25-2.25h-.75v-2.625c0-1.036-.84-1.875-1.875-1.875h-.739a6.706 6.706 0 0 1-1.112-3.173 6.73 6.73 0 0 0 2.743-1.347 6.753 6.753 0 0 0 6.139-5.6.75.75 0 0 0-.585-.858 47.077 47.077 0 0 0-3.07-.543V2.62a.75.75 0 0 0-.658-.744 49.22 49.22 0 0 0-6.093-.377c-2.063 0-4.096.128-6.093.377a.75.75 0 0 0-.657.744Zm0 2.629c0 1.196.312 2.32.857 3.294A5.266 5.266 0 0 1 3.16 5.337a45.6 45.6 0 0 1 2.006-.343v.256Zm13.5 0v-.256c.674.1 1.343.214 2.006.343a5.265 5.265 0 0 1-2.863 3.207 6.72 6.72 0 0 0 .857-3.294Z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                            <h3 class="text-cyan-400 font-semibold">Vision Keeper</h3>
+                                        </div>
+                                        <p class="text-gray-300">Achieving success through strategic insight.</p>
+                                    </div>
+                                    <div
+                                        class="flip-card-back absolute inset-0 bg-gradient-to-br from-yellow-500 to-red-500 p-6 rounded-lg shadow-lg flex items-center justify-center">
+                                        <p class="text-white text-center">mission = "Empower Minds"
+                                            <br>vision = "Innovate for Tomorrow"
+                                            <br>print(f"{vision} 🚀 | {mission} 💡")
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-
-                    <!-- Right Section: Cards -->
-                    <di class="grid md:grid-cols-2 gap-6">
-
-                        <!-- Card 1 -->
-                        <div
-                            class="group relative bg-[#1a1a3a] p-6 rounded-lg shadow-lg overflow-hidden cursor-pointer transition hover:scale-105">
-                            <div
-                                class="absolute inset-0 bg-gradient-to-br from-purple-500 to-blue-500 opacity-0 group-hover:opacity-100 transition">
-                            </div>
-
-                            <div class="relative z-10">
-                                <div class="flex items-center gap-2 mb-3">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="1.5" stroke="currentColor" class="size-6">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
-                                    </svg>
-                                    <h3 class="text-yellow-400 font-semibold">Code Maestro</h3>
-                                </div>
-                                <p class="text-gray-400">Brewing elegant code solutions with the magic of Coding.</p>
-                            </div>
-                        </div>
-
-                        <!-- Card 2 -->
-                        <div
-                            class="group relative bg-[#1a1a3a] p-6 rounded-lg shadow-lg overflow-hidden cursor-pointer transition hover:scale-105">
-                            <div
-                                class="absolute inset-0 bg-gradient-to-br from-blue-500 to-green-500 opacity-0 group-hover:opacity-100 transition">
-                            </div>
-
-                            <div class="relative z-10">
-                                <div class="flex items-center gap-2 mb-3">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="1.5" stroke="currentColor" class="size-6">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M5.25 14.25h13.5m-13.5 0a3 3 0 0 1-3-3m3 3a3 3 0 1 0 0 6h13.5a3 3 0 1 0 0-6m-16.5-3a3 3 0 0 1 3-3h13.5a3 3 0 0 1 3 3m-19.5 0a4.5 4.5 0 0 1 .9-2.7L5.737 5.1a3.375 3.375 0 0 1 2.7-1.35h7.126c1.062 0 2.062.5 2.7 1.35l2.587 3.45a4.5 4.5 0 0 1 .9 2.7m0 0a3 3 0 0 1-3 3m0 3h.008v.008h-.008v-.008Zm0-6h.008v.008h-.008v-.008Zm-3 6h.008v.008h-.008v-.008Zm0-6h.008v.008h-.008v-.008Z" />
-                                    </svg>
-
-                                    <h3 class="text-cyan-300 font-semibold">Algorithm Whisperer</h3>
-                                </div>
-                                <p class="text-gray-300"> Addressing complex challenges with refined solutions, one
-                                    algorithm at a time.</p>
-                            </div>
-                        </div>
-
-                        <!-- Card 3 -->
-                        <div
-                            class="group relative bg-[#1a1a3a] p-6 rounded-lg shadow-lg overflow-hidden cursor-pointer transition hover:scale-105">
-                            <div
-                                class="absolute inset-0 bg-gradient-to-br from-pink-500 to-orange-500 opacity-0 group-hover:opacity-100 transition">
-                            </div>
-
-                            <div class="relative z-10">
-                                <div class="flex items-center gap-2 mb-3">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="1.5" stroke="currentColor" class="size-6">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M15.59 14.37a6 6 0 0 1-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 0 0 6.16-12.12A14.98 14.98 0 0 0 9.631 8.41m5.96 5.96a14.926 14.926 0 0 1-5.841 2.58m-.119-8.54a6 6 0 0 0-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 0 0-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 0 1-2.448-2.448 14.9 14.9 0 0 1 .06-.312m-2.24 2.39a4.493 4.493 0 0 0-1.757 4.306 4.493 4.493 0 0 0 4.306-1.758M16.5 9a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z" />
-                                    </svg>
-
-                                    <h3 class="text-yellow-400 font-semibold">Innovation Alchemist</h3>
-                                </div>
-                                <p class="text-gray-300">Turning ideas into exceptional solutions through cutting-edge
-                                    technology.</p>
-                            </div>
-                        </div>
-
-                        <!-- Card 4 -->
-                        <div
-                            class="group relative bg-[#1a1a3a] p-6 rounded-lg shadow-lg overflow-hidden cursor-pointer transition hover:scale-105">
-                            <div
-                                class="absolute inset-0 bg-gradient-to-br from-yellow-500 to-red-500 opacity-0 group-hover:opacity-100 transition">
-                            </div>
-
-                            <div class="relative z-10">
-                                <div class="flex items-center gap-2 mb-3">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                        class="size-6">
-                                        <path fill-rule="evenodd"
-                                            d="M5.166 2.621v.858c-1.035.148-2.059.33-3.071.543a.75.75 0 0 0-.584.859 6.753 6.753 0 0 0 6.138 5.6 6.73 6.73 0 0 0 2.743 1.346A6.707 6.707 0 0 1 9.279 15H8.54c-1.036 0-1.875.84-1.875 1.875V19.5h-.75a2.25 2.25 0 0 0-2.25 2.25c0 .414.336.75.75.75h15a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-2.25-2.25h-.75v-2.625c0-1.036-.84-1.875-1.875-1.875h-.739a6.706 6.706 0 0 1-1.112-3.173 6.73 6.73 0 0 0 2.743-1.347 6.753 6.753 0 0 0 6.139-5.6.75.75 0 0 0-.585-.858 47.077 47.077 0 0 0-3.07-.543V2.62a.75.75 0 0 0-.658-.744 49.22 49.22 0 0 0-6.093-.377c-2.063 0-4.096.128-6.093.377a.75.75 0 0 0-.657.744Zm0 2.629c0 1.196.312 2.32.857 3.294A5.266 5.266 0 0 1 3.16 5.337a45.6 45.6 0 0 1 2.006-.343v.256Zm13.5 0v-.256c.674.1 1.343.214 2.006.343a5.265 5.265 0 0 1-2.863 3.207 6.72 6.72 0 0 0 .857-3.294Z"
-                                            clip-rule="evenodd" />
-                                    </svg>
-                                    <h3 class="text-cyan-400 font-semibold">Vision Keeper</h3>
-                                </div>
-                                <p class="text-gray-300 text-bold">Achieving success through strategic insight and technical
-                                    excellence.</p>
-                            </div>
-                        </div>
-
+                </section>
             </section>
 
-        </section>
 
-        <section id="skills" class="min-h-screen text-center py-14 space-y-10">
-            <h1 class="text-4xl font-bold">🛠️ Skills & Expertise</h1>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-10 max-w-7xl mx-auto">
-
-                <!-- Card 1 -->
-                <div
-                    class="group bg-[#1e293b] rounded-xl shadow-lg p-6 transition transform hover:scale-105 hover:shadow-2xl">
-                    <h3 class="text-xl font-bold text-[#38bdf8]">Programming Languages</h3>
-                    <p class="text-gray-400 text-md mt-2">java,HTML, CSS, JavaScript, SQL, React.js,tailwindcss</p>
-                    <p class="text-gray-300 text-sm mt-1">Proficient in development.</p>
-                </div>
-
-                <!-- Card 2 -->
-                <div
-                    class="group bg-[#1e293b] rounded-xl shadow-lg p-6 transition transform hover:scale-105 hover:shadow-2xl">
-                    <h3 class="text-xl font-bold text-[#22c55e]">Productivity Tools</h3>
-                    <p class="text-gray-400 text-md mt-2">MS Word, Spreadsheet, Power BI</p>
-                    <p class="text-gray-300 text-sm mt-1">Data analysis and documentation.</p>
-                </div>
-
-                <!-- Card 3 -->
-                <div
-                    class="group bg-[#1e293b] rounded-xl shadow-lg p-6 transition transform hover:scale-105 hover:shadow-2xl">
-                    <h3 class="text-xl font-bold text-[#a855f7]">Cybersecurity Tools</h3>
-                    <p class="text-gray-400 text-md mt-2">Metasploit, Burp Suite</p>
-                    <p class="text-gray-300 text-sm mt-1">Penetration testing and vulnerability analysis.</p>
-                </div>
-
-                <!-- Card 4 -->
-                <div
-                    class="group bg-[#1e293b] rounded-xl shadow-lg p-6 transition transform hover:scale-105 hover:shadow-2xl">
-                    <h3 class="text-xl font-bold text-[#facc15]">CS & Networking</h3>
-                    <p class="text-gray-400 text-md mt-2">Data Structures, Algorithms, OS, DBMS, Networking</p>
-                    <p class="text-gray-300 text-sm mt-1">Efficient problem-solving, system design, and network
-                        protocols expertise.</p>
-                </div>
-
-                <!-- Card 5 -->
-                <div
-                    class="group bg-[#1e293b] rounded-xl shadow-lg p-6 transition transform hover:scale-105 hover:shadow-2xl">
-                    <h3 class="text-xl font-bold text-[#f97316]">Version Control</h3>
-                    <p class="text-gray-400 text-md mt-2">Git, GitHub</p>
-                    <p class="text-gray-300 text-sm mt-1">Efficient code management.</p>
-                </div>
-
-                <!-- Card 6 -->
-                <div
-                    class="group bg-[#1e293b] rounded-xl shadow-lg p-6 transition transform hover:scale-105 hover:shadow-2xl">
-                    <h3 class="text-xl font-bold text-[#f43f5e]">IDEs & Tools</h3>
-                    <p class="text-gray-400 text-md mt-2">VS code , Intellij</p>
-                    <p class="text-gray-300 text-sm mt-1">Efficient coding with modern IDEs</p>
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <section id="projects" class="max-w-5xl mx-auto px-10 -py-20">
-            <h2 class="text-5xl font-bold text-center text-white mb-16">🚀 My Projects</h2>
-
-            <div class="relative">
-                <div
-                    class="absolute inset-y-0 left-1/2 w-1 bg-gradient-to-b from-[#1E3A8A] to-[#9333EA] transform -translate-x-1/2">
-                </div>
-
-                <!-- Project 1 -->
-                <div class="relative flex items-center mb-16">
-                    <div
-                        class="w-10 h-10 rounded-full bg-gradient-to-br from-[#1E3A8A] to-[#4C1D95] border-4 border-gray-900 shadow-lg z-10">
-                    </div>
-                    <div
-                        class="bg-gradient-to-br from-[#0F172A] to-[#D946EF]    p-8 rounded-lg shadow-lg transition-all duration-500 hover:scale-105 hover:shadow-2xl ml-8 w-full">
-                        <h3 class="text-3xl font-bold text-white mb-2">🖥️ Club Management Frontend</h3>
-                        <p class="text-gray-300">
-                            A responsive **frontend interface** for managing club activities, events, and members.
-                            Built with **HTML, CSS, and JavaScript**, featuring **dynamic content display** and modern
-                            UI/UX.
-                        </p>
-                        <div class="flex gap-4 mt-4">
-                            <a href="https://club-management-frontend-tan.vercel.app/" target="_blank"
-                                class="bg-gradient-to-br from-[#0F172A] to-[#6B21A8]  text-white px-5 py-2 rounded-lg flex items-center gap-2 hover:bg-blue-600 transition shadow-lg">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
-                            </a>
-                            <a href="https://github.com/Rishabh001pawar/club-management-frontend" target="_blank"
-                                class="bg-gray-800 text-white px-5 py-2 rounded-lg flex items-center gap-2 hover:bg-gray-700 transition shadow-lg">
-                                <i class="fas fa-code"></i> Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- Project 2 -->
-                <div class="relative flex items-center mb-16">
-                    <!-- Marker -->
-                    <div
-                        class="w-10 h-10 rounded-full bg-gradient-to-br from-[#1E3A8A] to-[#4C1D95] border-4 border-gray-900 shadow-lg z-10">
-                    </div>
-                    <div
-                        class="bg-gradient-to-br from-[#0A192F] to-[#4C1D95] p-8 rounded-lg shadow-lg transition-all duration-500 hover:scale-105 hover:shadow-2xl ml-8 w-full">
-                        <h3 class="text-3xl font-bold text-white mb-2">📊 Two Sum Visualization</h3>
-                        <p class="text-gray-300">
-                            An interactive web app built with HTML, CSS, and JavaScript to visualize the Two Sum
-                            algorithm.
-                            It dynamically displays the steps of the algorithm with animated highlights and
-                            real-time execution.
-                        </p>
-                        <div class="flex gap-4 mt-4">
-                            <a href="https://two-sum-two.vercel.app/" target="_blank"
-                                class="bg-gradient-to-br from-[#0F172A] to-[#6B21A8]  text-white px-5 py-2 rounded-lg flex items-center gap-2 hover:bg-blue-600 transition shadow-lg">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
-                            </a>
-                            <a href="https://github.com/Rishabh001pawar/Two-sum" target="_blank"
-                                class="bg-gray-800 text-white px-5 py-2 rounded-lg flex items-center gap-2 hover:bg-gray-700 transition shadow-lg">
-                                <i class="fas fa-code"></i> Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- Project 3-->
-                <div class="relative flex items-center mb-16">
-                    <div
-                        class="w-10 h-10 rounded-full bg-gradient-to-br from-[#4B5563] to-[#1F2937] border-4 border-gray-900 shadow-lg z-10">
-                    </div>
-                    <div
-                        class="bg-gradient-to-br from-[#0F172A] to-[#4B5563] p-8 rounded-lg shadow-lg transition-all duration-500 hover:scale-105 hover:shadow-2xl ml-8 w-full">
-                        <h3 class="text-3xl font-bold text-white mb-2">🤖 TechnoVate: A Smarter Way to Read the Web</h3>
-                        <p class="text-gray-300">
-                            An innovative web platform designed to enhance reading experiences by summarizing,
-                            highlighting, and simplifying content.
-                            Built with HTML, CSS, and JavaScript, offering a seamless and intuitive user interface.
-                        </p>
-                        <div class="flex gap-4 mt-4">
-                            <a href="https://techno-topaz.vercel.app/" target="_blank"
-                                class="bg-gradient-to-br from-[#0F172A] to-[#6B21A8]  text-white px-5 py-2 rounded-lg flex items-center gap-2 hover:bg-blue-600 transition shadow-lg">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
-                            </a>
-                            <a href="https://github.com/Rishabh001pawar/TechnoVate---A-Smarter-Way-to-Read-the-Web"
-                                target="_blank"
-                                class="bg-gray-800 text-white px-5 py-2 rounded-lg flex items-center gap-2 hover:bg-gray-700 transition shadow-lg">
-                                <i class="fas fa-code"></i> Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- Project 4 -->
-                <div class="relative flex items-center mb-16">
-                    <div
-                        class="w-10 h-10 rounded-full bg-gradient-to-br from-[#F59E0B] to-[#B45309] border-4 border-gray-900 shadow-lg z-10">
-                    </div>
-
-                    <div
-                        class="bg-gradient-to-br from-[#0F172A] to-[#B45309] p-8 rounded-lg shadow-lg transition-all duration-500 hover:scale-105 hover:shadow-2xl ml-8 w-full">
-                        <h3 class="text-3xl font-bold text-white mb-2">🌐 Portfolio Website</h3>
-                        <p class="text-gray-300">Responsive personal portfolio with smooth animations.</p>
-
-                        <div class="flex gap-4 mt-4">
-                            <a href="#" target="_blank"
-                                class="bg-gradient-to-br from-[#0F172A] to-[#6B21A8]  text-white px-5 py-2 rounded-lg flex items-center gap-2 hover:bg-blue-600 transition shadow-lg">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
-                            </a>
-                            <a href="https://github.com/Rishabh001pawar/Portfolio-Website" target="_blank"
-                                class="bg-gray-800 text-white px-5 py-2 rounded-lg flex items-center gap-2 hover:bg-gray-700 transition shadow-lg">
-                                <i class="fas fa-code"></i> Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- project 5-->
-                <div class="relative flex items-center ">
-                    <div
-                        class="w-10 h-10 rounded-full bg-gradient-to-br from-[#061235] to-[#6212ad] border-4 border-gray-900 shadow-lg z-10">
-                    </div>
-                    <div
-                        class="bg-gradient-to-br from-[#0F172A] to-[#870eac]   p-8 rounded-lg shadow-lg transition-all duration-500 hover:scale-105 hover:shadow-2xl ml-8 w-full">
-                        <h3 class="text-3xl font-bold text-white mb-2">🌡️ Temperature Converter</h3>
-                        <p class="text-gray-300">
-                            A web-based tool built with HTML, CSS, and JavaScript to convert temperatures between
-                            Celsius, Fahrenheit, and Kelvin.
-                        </p>
-                        <!-- Buttons -->
-                        <div class="flex gap-4 mt-4">
-                            <a href="https://temperature-converter.vercel.app/" target="_blank"
-                                class="bg-gradient-to-br from-[#0F172A] to-[#6B21A8]  text-white px-5 py-2 rounded-lg flex items-center gap-2 hover:bg-blue-600 transition shadow-lg">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
-                            </a>
-                            <a href="https://github.com/Rishabh001pawar/temperature-converter" target="_blank"
-                                class="bg-gray-800 text-white px-5 py-2 rounded-lg flex items-center gap-2 hover:bg-gray-700 transition shadow-lg">
-                                <i class="fas fa-code"></i> Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="achievements" class="max-w-6xl mx-auto px-10 py-10 overflow-hidden">
-
-            <!-- Title -->
-            <h2 class="text-5xl font-bold text-center text-white mb-16">🏆 Achievements</h2>
-            <!-- Education Section -->
-            <div class="mb-20">
-                <h3 class="text-4xl font-bold text-blue-400 text-center  mb-10">🎓 Education</h3>
-
-                <div class="space-y-10">
-
-                    <div class="mb-20">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-
-                            <!-- Education 1 -->
-                            <div
-                                class="flex items-center bg-gradient-to-r from-[#0b0b1d]/70 to-[#1b1b47]/50 rounded-lg shadow-lg hover:shadow-blue-500/50 transition duration-300 p-6">
-                                <div
-                                    class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center shadow-md mr-6">
-                                    <i data-feather="book-open" class="text-white" width="32" height="32"></i>
-                                </div>
-
-                                <div>
-                                    <h3 class="text-2xl font-semibold text-white">Bachelor of Engineering (B.E)</h3>
-                                    <p class="text-gray-300">LNCT Group of Technology</p>
-                                    <p class="text-gray-400">2022 - 2026</p>
-                                </div>
-                            </div>
-                            <!-- Education 2 -->
-                            <div
-                                class="flex items-center bg-gradient-to-r from-[#0b0b1d]/70 to-[#1b1b47]/50 rounded-lg shadow-lg hover:shadow-red-500/50 transition duration-300 p-6">
-                                <div
-                                    class="w-16 h-16 bg-red-400 rounded-full flex items-center justify-center shadow-md mr-6">
-                                    <i data-feather="user" class="text-white" width="32" height="32"></i>
-                                </div>
-
-                                <div>
-                                    <h3 class="text-2xl font-semibold text-white">Higher Secondary (HSC)</h3>
-                                    <p class="text-gray-300">CPS Multai</p>
-                                    <p class="text-gray-400">2020 - 2022</p>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Certification Section -->
-                <div class="-mb-20">
-                    <h3 class="text-3xl font-bold text-green-400 text-center mb-8">📜 Certifications</h3>
-
-                    <div class="grid grid-cols-2 md:grid-cols-3 gap-10">
-
-                        <!-- Certification 1 -->
-                        <div class="flex items-center space-x-4">
-                            <div class="w-4 h-4 bg-yellow-500 rounded-full shadow-lg"></div>
-                            <div>
-                                <h4 class="text-xl font-semibold text-white">Cisco Networking Virtual Internship</h4>
-                                <a href="https://www.credly.com/badges/xyz" target="_blank"
-                                    class="text-blue-400 hover:underline">View Certificate</a>
-                            </div>
-                        </div>
-
-                        <!-- Certification 2 -->
-                        <div class="flex items-center space-x-4">
-                            <div class="w-4 h-4 bg-red-500 rounded-full shadow-lg"></div>
-                            <div>
-                                <h4 class="text-xl font-semibold text-white">Google Cybersecurity</h4>
-                                <a href="https://www.coursera.org/account/accomplishments/specialization/XKAXUE7RLXXM"
-                                    target="_blank" class="text-blue-400 hover:underline">View Certificate</a>
-                            </div>
-                        </div>
-
-                        <!-- Certification 3 -->
-                        <div class="flex items-center space-x-4">
-                            <div class="w-4 h-4 bg-blue-500 rounded-full shadow-lg"></div>
-                            <div>
-                                <h4 class="text-xl font-semibold text-white">CCNA: Introduction to Networks</h4>
-                                <a href="https://www.credly.com/badges/fe8723fc-61b8-463f-a1a8-693c2aab835b/linked_in_profile"
-                                    target="_blank" class="text-blue-400 hover:underline">View Certificate</a>
-                            </div>
-                        </div>
-
-                        <!-- Certification 4 -->
-                        <div class="flex items-center space-x-4">
-                            <div class="w-4 h-4 bg-green-500 rounded-full shadow-lg"></div>
-                            <div>
-                                <h4 class="text-xl font-semibold text-white">Google AI Essentials</h4>
-                                <a href="https://www.coursera.org/account/accomplishments/records/ML326K4A7JQX"
-                                    target="_blank" class="text-blue-400 hover:underline">View Certificate</a>
-                            </div>
-                        </div>
-
-                        <!-- Certification 5 -->
-                        <div class="flex items-center space-x-4">
-                            <div class="w-4 h-4 bg-purple-500 rounded-full shadow-lg"></div>
-                            <div>
-                                <h4 class="text-xl font-semibold text-white">JR Penetration Tester</h4>
-                                <a href="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-AWOJXIFGBB.png"
-                                    target="_blank" class="text-blue-400 hover:underline">View Certificate</a>
-                            </div>
-                        </div>
-
-                        <!-- Certification 6 -->
-                        <div class="flex items-center space-x-4">
-                            <div class="w-4 h-4 bg-orange-500 rounded-full shadow-lg"></div>
-                            <div>
-                                <h4 class="text-xl font-semibold text-white">ISRO AIML</h4>
-                                <a href="https://isrolms.iirs.gov.in/course/view.php?id=390" target="_blank"
-                                    class="text-blue-400 hover:underline">View Certificate</a>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="gallery" class="max-w-7xl mx-auto px-10 py-20 mt-0">
-            <h2 class="text-5xl font-bold text-center text-white mb-10">📸 Gallery</h2>
-        
-            <!-- Scrollable Container -->
-            <div class="relative group max-w-full overflow-hidden">
-                <!-- First Row -->
-                <div id="galleryContainer" class="flex gap-6 whitespace-nowrap overflow-x-auto scroll-smooth mb-6">
-                    <!-- Images -->
-                    <div class="overflow-hidden rounded-lg shadow-lg w-[300px] h-[300px] flex-shrink-0 transition-transform duration-300 hover:scale-105 hover:shadow-2xl" loading="lazy">
-                        <img src="./gallery/image1.jpg" alt="Gallery Image 1" class="w-full h-full object-cover">
-                    </div>
-                    <div class="overflow-hidden rounded-lg shadow-lg w-[300px] h-[300px] flex-shrink-0 transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
-                        <img src="./gallery/image3.png" alt="Gallery Image 2" class="w-full h-full object-cover">
-                    </div>
-                    <div class="overflow-hidden rounded-lg shadow-lg w-[300px] h-[300px] flex-shrink-0 transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
-                        <img src="./gallery/image4.webp" alt="Gallery Image 3" class="w-full h-full object-cover">
-                    </div>
-                    <div class="overflow-hidden rounded-lg shadow-lg w-[300px] h-[300px] flex-shrink-0 transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
-                        <img src="./gallery/image7.jpg" alt="Gallery Image 4" class="w-full h-full object-cover">
-                    </div>
-                    <div class="overflow-hidden rounded-lg shadow-lg w-[300px] h-[300px] flex-shrink-0 transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
-                        <img src="./gallery/image3.webp" alt="Gallery Image 6" class="w-full h-full object-cover">
-                    </div>
-                    <div class="overflow-hidden rounded-lg shadow-lg w-[300px] h-[300px] flex-shrink-0 transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
-                        <img src="./gallery/image12.jpg" alt="Gallery Image 7" class="w-full h-full object-cover">
-                    </div>
-                    <div class="overflow-hidden rounded-lg shadow-lg w-[300px] h-[300px] flex-shrink-0 transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
-                        <img src="./gallery/image11.jpg" alt="Gallery Image 8" class="w-full h-full object-cover">
-                    </div>
-                    <div class="overflow-hidden rounded-lg shadow-lg w-[300px] h-[300px] flex-shrink-0 transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
-                        <img src="./gallery/image10.jpg" alt="Gallery Image 9" class="w-full h-full object-cover">
-                    </div>
-                    <div class="overflow-hidden rounded-lg shadow-lg w-[300px] h-[300px] flex-shrink-0 transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
-                        <img src="./gallery/image15.jpg" alt="Gallery Image 10" class="w-full h-full object-cover">
-                    </div>
-                    <div class="overflow-hidden rounded-lg shadow-lg w-[300px] h-[300px] flex-shrink-0 transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
-                        <img src="./gallery/img6.jpg" alt="Gallery Image 11" class="w-full h-full object-cover">
-                    </div>
-                    <div class="overflow-hidden rounded-lg shadow-lg w-[300px] h-[300px] flex-shrink-0 transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
-                        <img src="./gallery/img15.jpg" alt="Gallery Image 12" class="w-full h-full object-cover">
-                    </div>
-                </div>
-            
-                <!-- Second Row -->
-                <div id="galleryContainer" class="flex gap-6 whitespace-nowrap overflow-x-auto scroll-smooth">
-                    <!-- Images -->
-                    <div class="overflow-hidden rounded-lg shadow-lg w-[300px] h-[300px] flex-shrink-0 transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
-                        <img src="./gallery/image5.jpg" alt="Gallery Image 1" class="w-full h-full object-cover">
-                    </div>
-                    <div class="overflow-hidden rounded-lg shadow-lg w-[300px] h-[300px] flex-shrink-0 transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
-                        <img src="./gallery/img2.jpg" alt="Gallery Image 2" class="w-full h-full object-cover">
-                    </div>
-                    <div class="overflow-hidden rounded-lg shadow-lg w-[300px] h-[300px] flex-shrink-0 transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
-                        <img src="./gallery/img3.jpg" alt="Gallery Image 3" class="w-full h-full object-cover">
-                    </div>
-                    <div class="overflow-hidden rounded-lg shadow-lg w-[300px] h-[300px] flex-shrink-0 transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
-                        <img src="./gallery/img4.jpg" alt="Gallery Image 4" class="w-full h-full object-cover">
-                    </div>
-                    <div class="overflow-hidden rounded-lg shadow-lg w-[300px] h-[300px] flex-shrink-0 transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
-                        <img src="./gallery/img5.jpg" alt="Gallery Image 5" class="w-full h-full object-cover">
-                    </div>
-                    <div class="overflow-hidden rounded-lg shadow-lg w-[300px] h-[300px] flex-shrink-0 transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
-                        <img src="./gallery/image6.jpg" alt="Gallery Image 6" class="w-full h-full object-cover">
-                    </div>
-                    <div class="overflow-hidden rounded-lg shadow-lg w-[300px] h-[300px] flex-shrink-0 transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
-                        <img src="./gallery/image14.jpg" alt="Gallery Image 7" class="w-full h-full object-cover">
-                    </div>
-                    <div class="overflow-hidden rounded-lg shadow-lg w-[300px] h-[300px] flex-shrink-0 transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
-                        <img src="./gallery/img9.jpg" alt="Gallery Image 8" class="w-full h-full object-cover">
-                    </div>
-                    <div class="overflow-hidden rounded-lg shadow-lg w-[300px] h-[300px] flex-shrink-0 transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
-                        <img src="./gallery/image8.jpg" alt="Gallery Image 9" class="w-full h-full object-cover">
-                    </div>
-                    <div class="overflow-hidden rounded-lg shadow-lg w-[300px] h-[300px] flex-shrink-0 transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
-                        <img src="./gallery/img8.jpg" alt="Gallery Image 10" class="w-full h-full object-cover">
-                    </div>
-                    <div class="overflow-hidden rounded-lg shadow-lg w-[300px] h-[300px] flex-shrink-0 transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
-                        <img src="./gallery/img7.jpg" alt="Gallery Image 11" class="w-full h-full object-cover">
-                    </div>
-                </div>
-            </div>
-                
-            </div>
-        
             <style>
-                /* Hide scrollbar by default */
-                #galleryContainer {
-                    scrollbar-width: none; /* Firefox */
-                    -ms-overflow-style: none; /* IE and Edge */
+
+                .neon-glow {
+                    transition: box-shadow 0.3s ease;
                 }
-        
-                #galleryContainer::-webkit-scrollbar {
-                    width: 0;
-                    height: 0;
+
+                
+                .flicker {
+                    animation: flicker 3s infinite;
                 }
-        
-                /* Show scrollbar on hover */
-                .group:hover #galleryContainer::-webkit-scrollbar {
-                    height: 12px;
+
+                .flicker-active {
+                    animation: flicker 1.5s infinite;
                 }
-        
-                .group:hover #galleryContainer::-webkit-scrollbar-thumb {
-                    background: #555;
-                    border-radius: 10px;
+
+                @keyframes flicker {
+
+                    0%,
+                    18%,
+                    22%,
+                    25%,
+                    53%,
+                    57%,
+                    100% {
+                        opacity: 1;
+                    }
+
+                    20%,
+                    24%,
+                    55% {
+                        opacity: 0.6;
+                    }
                 }
-        
-                .group:hover #galleryContainer::-webkit-scrollbar-thumb:hover {
-                    background: #888;
+
+                .shimmer {
+                    position: relative;
+                    overflow: hidden;
                 }
-        
-                .group:hover #galleryContainer::-webkit-scrollbar-track {
-                    background: #f1f1f1;
+
+                .shimmer::after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: -100%;
+                    width: 50%;
+                    height: 100%;
+                    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+                    animation: shimmer 2s infinite;
                 }
-        
-                /* Scroll Button Styling */
-                button {
-                    transition: all 0.3s ease;
+
+                @keyframes shimmer {
+                    0% {
+                        transform: translateX(-100%);
+                    }
+
+                    100% {
+                        transform: translateX(300%);
+                    }
                 }
-        
-                button:hover {
-                    transform: scale(1.1);
+
+                .flip-card {
+                    perspective: 1000px;
                 }
-        
-                /* Ensure 4 images are visible at a time */
-                #galleryContainer {
-                    width: calc((300px + 24px) * 4); /* 4 images + gap */
+
+                .flip-card-inner {
+                    transition: transform 0.6s;
+                    transform-style: preserve-3d;
                 }
-        
-                /* Image Hover Effects */
-                .hover\:scale-105:hover {
-                    transform: scale(1.05);
+
+                .flip-card:hover .flip-card-inner {
+                    transform: rotateY(180deg);
                 }
-        
-                .hover\:shadow-2xl:hover {
-                    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+
+                .flip-card-front,
+                .flip-card-back {
+                    backface-visibility: hidden;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                .flip-card-back {
+                    transform: rotateY(180deg);
                 }
             </style>
-        
-            <script>
+            </section>
+
+            <section id="skills" class="min-h-screen text-center py-14 space-y-10 relative">
+                <!-- Particle Background -->
+                <div id="particles-js" class="absolute inset-0 z-0"></div>
+
+                <h1 class="text-4xl font-bold neon-glow relative z-10">🛠️ Skills & Expertise</h1>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-10 max-w-7xl mx-auto relative z-10">
+                    <!-- Card 1 -->
+                    <div class="group bg-[#1e293b] rounded-xl shadow-lg p-6 transition transform animate-card ">
+                        <h3 class="text-xl font-bold text-[#38bdf8] flicker">Programming Languages</h3>
+                        <p class="text-gray-400 text-md mt-2 color-shift">Java, HTML, CSS, JavaScript, SQL, React.js,
+                            Tailwind CSS</p>
+                        <p class="text-gray-300 text-sm mt-1">Proficient in development.</p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="group bg-[#1e293b] rounded-xl shadow-lg p-6 transition transform animate-card ">
+                        <h3 class="text-xl font-bold text-[#22c55e] flicker">Productivity Tools</h3>
+                        <p class="text-gray-400 text-md mt-2 color-shift">MS Word, Spreadsheet, Power BI</p>
+                        <p class="text-gray-300 text-sm mt-1">Data analysis and documentation.</p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="group bg-[#1e293b] rounded-xl shadow-lg p-6 transition transform animate-card ">
+                        <h3 class="text-xl font-bold text-[#a855f7] flicker">Cybersecurity Tools</h3>
+                        <p class="text-gray-400 text-md mt-2 color-shift">Metasploit, Burp Suite</p>
+                        <p class="text-gray-300 text-sm mt-1">Penetration testing and vulnerability analysis.</p>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="group bg-[#1e293b] rounded-xl shadow-lg p-6 transition transform animate-card ">
+                        <h3 class="text-xl font-bold text-[#facc15] flicker">CS & Networking</h3>
+                        <p class="text-gray-400 text-md mt-2 color-shift">Data Structures, Algorithms, OS, DBMS,
+                            Networking
+                        </p>
+                        <p class="text-gray-300 text-sm mt-1">Efficient problem-solving, system design, and network
+                            protocols expertise.</p>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="group bg-[#1e293b] rounded-xl shadow-lg p-6 transition transform animate-card ">
+                        <h3 class="text-xl font-bold text-[#f97316] flicker">Version Control</h3>
+                        <p class="text-gray-400 text-md mt-2 color-shift">Git, GitHub</p>
+                        <p class="text-gray-300 text-sm mt-1">Efficient code management.</p>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="group bg-[#1e293b] rounded-xl shadow-lg p-6 transition transform animate-card ">
+                        <h3 class="text-xl font-bold text-[#f43f5e] flicker">IDEs & Tools</h3>
+                        <p class="text-gray-400 text-md mt-2 color-shift">VS Code, IntelliJ</p>
+                        <p class="text-gray-300 text-sm mt-1">Efficient coding with modern IDEs.</p>
+                    </div>
+                </div>
+
+
+                <style>
+                   
+                    .neon-glow {
+                        transition: box-shadow 0.3s ease;
+                    }
+
+                    
+                    .flicker-active {
+                        animation: flicker 1.5s infinite;
+                    }
+
+                    @keyframes flicker {
+
+                        0%,
+                        18%,
+                        22%,
+                        25%,
+                        53%,
+                        57%,
+                        100% {
+                            opacity: 1;
+                        }
+
+                        20%,
+                        24%,
+                        55% {
+                            opacity: 0.6;
+                        }
+                    }
+
+                    
+                    .shimmer {
+                        position: relative;
+                        overflow: hidden;
+                    }
+
+                    .shimmer::after {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: -100%;
+                        width: 50%;
+                        height: 100%;
+                        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+                        animation: shimmer 2s infinite;
+                    }
+
+                    @keyframes shimmer {
+                        0% {
+                            transform: translateX(-100%);
+                        }
+
+                        100% {
+                            transform: translateX(300%);
+                        }
+                    }
+                </style>
+
+                </section>
+
+
+                <section id="projects" class="max-w-5xl mx-auto px-6 py-6">
+
+                    <div id="projects-root"></div>
+                    <script type="text/babel">
+                        const projects = [
+                            {
+                                title: "🖥️ Developer community",
+                                description: "A responsive interface designed for managing a developer community — including events, mentors, tech domains, and participants. It's features dynamic content rendering, clean design, and a modern developer-centric UI/UX experience.",
+                                liveDemo: "https://developer-community-silk.vercel.app/",
+                                code: "https://github.com/Rishabh001pawar/developer-community",
+                                gradientFrom: "from-[#0F172A]",
+                                gradientTo: "to-[#D946EF]",
+                                category: "Web"
+                            },
+                            {
+                                title: "📊 Two Sum Visualization",
+                                description: "An interactive web app built with HTML, CSS, and JavaScript to visualize the Two Sum algorithm. It dynamically displays the steps of the algorithm with animated highlights and real-time execution.",
+                                liveDemo: "https://two-sum-two.vercel.app/",
+                                code: "https://github.com/Rishabh001pawar/Two-sum",
+                                gradientFrom: "from-[#0A192F]",
+                                gradientTo: "to-[#4C1D95]",
+                                category: "Visualization"
+                            },
+                            {
+                                title: "✍️🧠 Ultimate Text Editor Pro",
+                                description: "Ultimate Text Editor Pro is a fast, web-based text editor built with HTML, CSS, and JavaScript. It offers rich text formatting, emoji support, auto-save, and AI-powered writing assistance. The tool is optimized for speed, providing quick word and character counts, and includes a comment section for collaboration.",
+                                liveDemo: "https://temperature-converter.vercel.app/",
+                                code: "https://github.com/Rishabh001pawar/temperature-converter",
+                                gradientFrom: "from-[#111827]",
+                                gradientTo: "to-[#34D399]",
+                                category: "Web"
+                            },
+                            {
+                                title: "🌐 Portfolio Website",
+                                description: "Responsive personal portfolio with smooth animations.",
+                                liveDemo: "#",
+                                code: "https://github.com/Rishabh001pawar/Portfolio-Website",
+                                gradientFrom: "from-[#1a1c2c]",
+                                gradientTo: "to-[#10B981]",
+                                category: "Portfolio"
+                            },
+                            {
+                                title: "🤖 TechnoVate: A Smarter Way to Read the Web",
+                                description: "An innovative web platform designed to enhance reading experiences by summarizing, highlighting, and simplifying content. Built with HTML, CSS, and JavaScript, offering a seamless and intuitive user interface.",
+                                liveDemo: "https://techno-topaz.vercel.app/",
+                                code: "https://github.com/Rishabh001pawar/TechnoVate---A-Smarter-Way-to-Read-the-Web",
+                                gradientFrom: "from-[#2d2a55]",
+                                gradientTo: "to-[#3cba92]",
+                                category: "Web"
+                            }
+                        ];
+
+                        const ProjectCard = ({ project, index, section }) => {
+                            const markerGradients = section === "featured" ? [
+                                "from-[#1E3A8A] to-[#4C1D95]",
+                                "from-[#1E3A8A] to-[#4C1D95]"
+                            ] : [
+                                "from-[#065F46] to-[#10B981]",
+                                "from-[#065F46] to-[#34D399]",
+                                "from-[#047857] to-[#6EE7B7]"
+                            ];
+                            const markerGradient = markerGradients[index % markerGradients.length];
+                            const [isVisible, setIsVisible] = React.useState(false);
+                            const cardRef = React.useRef(null);
+
+                            React.useEffect(() => {
+                                const observer = new IntersectionObserver(
+                                    ([entry]) => {
+                                        setIsVisible(entry.isIntersecting);
+                                    },
+                                    { threshold: 0.1 }
+                                );
+
+                                if (cardRef.current) {
+                                    observer.observe(cardRef.current);
+                                }
+
+                                return () => {
+                                    if (cardRef.current) {
+                                        observer.unobserve(cardRef.current);
+                                    }
+                                };
+                            }, []);
+
+                            const animationClass = index % 2 === 0 ? "slide-in-left" : "slide-in-right";
+
+                            return (
+                                <div
+                                    ref={cardRef}
+                                    className={`relative flex items-center mb-10 sm:mb-16 ${animationClass} ${isVisible ? "visible" : ""}`}
+                                >
+                                    <div className={`w-10 h-10 rounded-full bg-gradient-to-br ${markerGradient} border-4 border-gray-900 shadow-lg z-10 marker`}></div>
+                                    <div className={`bg-gradient-to-br ${project.gradientFrom} ${project.gradientTo} p-6 sm:p-8 rounded-lg shadow-lg transition-all duration-500 hover:scale-105 hover:shadow-2xl ml-6 sm:ml-8 w-full card`}>
+                                        <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2">{project.title}</h3>
+                                        <p className="text-gray-300 text-sm sm:text-base">{project.description}</p>
+                                        <div className="flex flex-wrap gap-3 sm:gap-4 mt-4">
+                                            <a
+                                                href={project.liveDemo}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="bg-gradient-to-br from-[#0F172A] to-[#6B21A8] text-white px-4 sm:px-5 py-2 rounded-lg flex items-center gap-2 hover:bg-blue-600 transition shadow-lg text-sm sm:text-base"
+                                            >
+                                                <i className="fas fa-external-link-alt"></i> Live Demo
+                                            </a>
+                                            <a
+                                                href={project.code}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="bg-gray-800 text-white px-4 sm:px-5 py-2 rounded-lg flex items-center gap-2 hover:bg-gray-700 transition shadow-lg text-sm sm:text-base"
+                                            >
+                                                <i className="fas fa-code"></i> Code
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            );
+                        };
+
+                        const ProjectSection = ({ title, projects, sectionId, timelineGradient, section }) => {
+                            const [selectedCategory, setSelectedCategory] = React.useState("All");
+                            const categories = ["All", ...new Set(projects.map(project => project.category))];
+
+                            const filteredProjects = selectedCategory === "All"
+                                ? projects
+                                : projects.filter(project => project.category === selectedCategory);
+
+                            return (
+                                <section id={sectionId} className="max-w-5xl mx-auto px-4 sm:px-10 py-16 sm:py-20">
+                                    <h2 className="text-4xl sm:text-5xl font-bold text-center text-white mb-12 sm:mb-16">{title}</h2>
+                                    <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-8 sm:mb-12">
+                                        {categories.map(category => (
+                                            <button
+                                                key={category}
+                                                onClick={() => setSelectedCategory(category)}
+                                                className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg text-white font-semibold transition-all text-sm sm:text-base ${selectedCategory === category
+                                                    ? "bg-gradient-to-br from-[#0F172A] to-[#6B21A8]"
+                                                    : "bg-gray-800 hover:bg-gray-700"
+                                                    }`}
+                                            >
+                                                {category}
+                                            </button>
+                                        ))}
+                                    </div>
+                                    <div className="relative">
+                                        <div className={`absolute inset-y-0 left-1/2 sm:left-1/2 w-1 bg-gradient-to-b ${timelineGradient} transform sm:-translate-x-1/2 timeline`}></div>
+                                        {filteredProjects.length > 0 ? (
+                                            filteredProjects.map((project, index) => (
+                                                <ProjectCard key={index} project={project} index={index} section={section} />
+                                            ))
+                                        ) : (
+                                            <p className="text-center text-gray-300 text-sm sm:text-base">No projects found in this category.</p>
+                                        )}
+                                    </div>
+                                </section>
+                            );
+                        };
+
+                        const App = () => {
+                            const featuredProjects = projects.slice(0, 2);
+                            const otherProjects = projects.slice(2);
+
+                            return (
+                                <div>
+                                    <ProjectSection
+                                        title="🚀 Featured Projects"
+                                        projects={featuredProjects}
+                                        sectionId="featured-projects"
+                                        timelineGradient="from-[#1E3A8A] to-[#9333EA]"
+                                        section="featured"
+                                    />
+                                    <ProjectSection
+                                        title="🌟 Other Projects"
+                                        projects={otherProjects}
+                                        sectionId="other-projects"
+                                        timelineGradient="from-[#065F46] to-[#10B981]"
+                                        section="other"
+                                    />
+                                </div>
+                            );
+                        };
+
+                        ReactDOM.render(<App />, document.getElementById('projects-root'));
+                    </script>
+                    <style>
+                        .slide-in-left {
+                            opacity: 0;
+                            transform: translateX(-50px);
+                            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+                        }
+
+                        .slide-in-right {
+                            opacity: 0;
+                            transform: translateX(50px);
+                            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+                        }
+
+                        .visible {
+                            opacity: 1;
+                            transform: translateX(0);
+                        }
+
+                        @media (max-width: 640px) {
+
+                            .slide-in-left,
+                            .slide-in-right {
+                                transform: translateX(0);
+                                opacity: 0;
+                                transition: opacity 0.4s ease-out;
+                            }
+
+                            .visible {
+                                opacity: 1;
+                            }
+
+                            .timeline {
+                                left: 20px;
+                                transform: none;
+                            }
+
+                            .marker {
+                                margin-left: -10px;
+                            }
+
+                            .card {
+                                margin-left: 40px;
+                            }
+                        }
+                    </style>
+                </section>
+
+                <section id="achievements" class="max-w-7xl mx-auto px-6 py-6 mt-0">
+                    <!-- Title -->
+                    <div id="achievements-root"></div>
+                    <script type="text/babel">
+                        const education = [
+                            {
+                                title: "Bachelor of Engineering (B.E)",
+                                institution: "LNCT Group of Technology",
+                                duration: "2022 - 2026",
+                                icon: "fas fa-book-open",
+                                color: "bg-blue-500",
+                                shadow: "hover:shadow-blue-500/50"
+                            },
+                            {
+                                title: "Higher Secondary (HSC)",
+                                institution: "CPS Multai",
+                                duration: "2020 - 2022",
+                                icon: "fas fa-user",
+                                color: "bg-red-400",
+                                shadow: "hover:shadow-red-500/50"
+                            }
+                        ];
+
+                        const certifications = [
+                            {
+                                title: "Cisco Networking Virtual Internship",
+                                link: "https://www.credly.com/badges/xyz",
+                                color: "bg-yellow-500",
+                                shadow: "hover:shadow-yellow-500/50",
+                                category: "Networking"
+                            },
+                            {
+                                title: "Google Cybersecurity",
+                                link: "https://www.coursera.org/account/accomplishments/specialization/XKAXUE7RLXXM",
+                                color: "bg-red-500",
+                                shadow: "hover:shadow-red-500/50",
+                                category: "Cybersecurity"
+                            },
+                            {
+                                title: "CCNA: Introduction to Networks",
+                                link: "https://www.credly.com/badges/fe8723fc-61b8-463f-a1a8-693c2aab835b/linked_in_profile",
+                                color: "bg-blue-500",
+                                shadow: "hover:shadow-blue-500/50",
+                                category: "Networking"
+                            },
+                            {
+                                title: "Google AI Essentials",
+                                link: "https://www.coursera.org/account/accomplishments/records/ML326K4A7JQX",
+                                color: "bg-green-500",
+                                shadow: "hover:shadow-green-500/50",
+                                category: "AI"
+                            },
+                            {
+                                title: "JR Penetration Tester",
+                                link: "https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-AWOJXIFGBB.png",
+                                color: "bg-purple-500",
+                                shadow: "hover:shadow-purple-500/50",
+                                category: "Cybersecurity"
+                            },
+                            {
+                                title: "ISRO AIML",
+                                link: "https://isrolms.iirs.gov.in/course/view.php?id=390",
+                                color: "bg-orange-500",
+                                shadow: "hover:shadow-orange-500/50",
+                                category: "AI"
+                            }
+                        ];
+
+                        const EducationCard = ({ item, index }) => {
+                            const [isVisible, setIsVisible] = React.useState(false);
+                            const cardRef = React.useRef(null);
+
+                            React.useEffect(() => {
+                                const observer = new IntersectionObserver(
+                                    ([entry]) => {
+                                        setIsVisible(entry.isIntersecting);
+                                    },
+                                    { threshold: 0.2 }
+                                );
+
+                                if (cardRef.current) {
+                                    observer.observe(cardRef.current);
+                                }
+
+                                return () => {
+                                    if (cardRef.current) {
+                                        observer.unobserve(cardRef.current);
+                                    }
+                                };
+                            }, []);
+
+                            const animationClass = index % 2 === 0 ? "slide-in-left" : "slide-in-right";
+
+                            return (
+                                <div
+                                    ref={cardRef}
+                                    className={`group relative bg-gradient-to-r from-[#0b0b1d]/80 to-[#1b1b47]/60 rounded-xl shadow-lg ${item.shadow} transition-all duration-300 p-6 transform hover:-translate-y-1 ${animationClass} ${isVisible ? "visible" : ""}`}
+                                >
+                                    <div className="flex items-center">
+                                        <div className={`w-14 h-14 ${item.color} rounded-full flex items-center justify-center shadow-md mr-4`}>
+                                            <i className={`${item.icon} text-white text-2xl`}></i>
+                                        </div>
+                                        <div>
+                                            <h3 className="text-xl sm:text-2xl font-semibold text-white">{item.title}</h3>
+                                            <p className="text-gray-300 text-sm sm:text-base">{item.institution}</p>
+                                            <p className="text-gray-400 text-sm">{item.duration}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            );
+                        };
+
+                        const CertificationCard = ({ item, index }) => {
+                            const [isVisible, setIsVisible] = React.useState(false);
+                            const cardRef = React.useRef(null);
+
+                            React.useEffect(() => {
+                                const observer = new IntersectionObserver(
+                                    ([entry]) => {
+                                        setIsVisible(entry.isIntersecting);
+                                    },
+                                    { threshold: 0.2 }
+                                );
+
+                                if (cardRef.current) {
+                                    observer.observe(cardRef.current);
+                                }
+
+                                return () => {
+                                    if (cardRef.current) {
+                                        observer.unobserve(cardRef.current);
+                                    }
+                                };
+                            }, []);
+
+                            const animationClass = index % 2 === 0 ? "slide-in-left" : "slide-in-right";
+
+                            return (
+                                <div
+                                    ref={cardRef}
+                                    className={`group bg-gradient-to-r from-[#0b0b1d]/80 to-[#1b1b47]/60 rounded-xl shadow-lg ${item.shadow} transition-all duration-300 p-4 transform hover:-translate-y-1 ${animationClass} ${isVisible ? "visible" : ""}`}
+                                >
+                                    <div className="flex items-center space-x-3">
+                                        <div className={`w-3 h-3 ${item.color} rounded-full shadow-lg`}></div>
+                                        <div>
+                                            <h4 className="text-lg sm:text-xl font-semibold text-white">{item.title}</h4>
+                                            <a
+                                                href={item.link}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="text-blue-400 hover:underline text-sm"
+                                            >
+                                                View Certificate
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            );
+                        };
+
+                        const AchievementsSection = () => {
+                            const [selectedCategory, setSelectedCategory] = React.useState("All");
+                            const categories = ["All", ...new Set(certifications.map(item => item.category))];
+
+                            const filteredCertifications = selectedCategory === "All"
+                                ? certifications
+                                : certifications.filter(item => item.category === selectedCategory);
+
+                            return (
+                                <section id="achievements" className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-10 py-16 overflow-hidden">
+                                    <h2 className="text-4xl sm:text-5xl font-bold text-center text-white mb-12">🏆 Achievements</h2>
+
+                                    {/* Education Section */}
+                                    <div className="mb-16">
+                                        <h3 className="text-3xl sm:text-4xl font-bold text-center text-blue-400 mb-8">🎓 Education</h3>
+                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+                                            {education.map((item, index) => (
+                                                <EducationCard key={index} item={item} index={index} />
+                                            ))}
+                                        </div>
+                                    </div>
+
+                                    {/* Certification Section */}
+                                    <div>
+                                        <h3 className="text-3xl sm:text-4xl font-bold text-center text-green-400 mb-8">📜 Certifications</h3>
+                                        <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-8">
+                                            {categories.map(category => (
+                                                <button
+                                                    key={category}
+                                                    onClick={() => setSelectedCategory(category)}
+                                                    className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg text-white font-semibold transition-all duration-300 text-sm sm:text-base ${selectedCategory === category
+                                                        ? "bg-gradient-to-br from-[#0F172A] to-[#6B21A8] shadow-lg"
+                                                        : "bg-gray-800 hover:bg-gray-700"
+                                                        }`}
+                                                >
+                                                    {category}
+                                                </button>
+                                            ))}
+                                        </div>
+                                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                                            {filteredCertifications.length > 0 ? (
+                                                filteredCertifications.map((item, index) => (
+                                                    <CertificationCard key={index} item={item} index={index} />
+                                                ))
+                                            ) : (
+                                                <p className="text-center text-gray-300 col-span-full">No certifications in this category.</p>
+                                            )}
+                                        </div>
+                                    </div>
+                                </section>
+                            );
+                        };
+
+                        ReactDOM.render(<AchievementsSection />, document.getElementById('achievements-root'));
+                    </script>
+                    <style>
+                        .slide-in-left {
+                            opacity: 0;
+                            transform: translateX(-40px);
+                            transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+                        }
+
+                       
+                        .slide-in-right {
+                            opacity: 0;
+                            transform: translateX(40px);
+                            transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+                        }
+
+                     
+                        .visible {
+                            opacity: 1;
+                            transform: translateX(0);
+                        }
+
+                        
+                        @media (max-width: 640px) {
+
+                            .slide-in-left,
+                            .slide-in-right {
+                                transform: translateX(0);
+                                opacity: 0;
+                                transition: opacity 0.5s ease-out;
+                            }
+
+                            .visible {
+                                opacity: 1;
+                            }
+                        }
+                    </style>
+
+                </section>
+
+
+
+                <section id="gallery" class="max-w-7xl mx-auto px-10 py-10 mt-0">
+                    <h2 class="text-5xl font-bold text-center text-white mb-10">📸 Gallery</h2>
+
+                    <!-- Scrollable Container -->
+                    <div class="relative group max-w-full overflow-hidden">
+                        <!-- First Row -->
+                        <div id="galleryContainer"
+                            class="flex gap-6 whitespace-nowrap overflow-x-auto scroll-smooth mb-6">
+                            <!-- Images -->
+                            <div class="overflow-hidden rounded-lg shadow-lg w-[300px] h-[300px] flex-shrink-0 transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+                                loading="lazy">
+                                <img src="/gallery/image1.jpg" alt="Gallery Image 1" class="w-full h-full object-cover">
+                            </div>
+                            <div
+                                class="overflow-hidden rounded-lg shadow-lg w-[300px] h-[300px] flex-shrink-0 transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+                                <img src="/gallery/image3.png" alt="Gallery Image 2" class="w-full h-full object-cover">
+                            </div>
+                            <div
+                                class="overflow-hidden rounded-lg shadow-lg w-[300px] h-[300px] flex-shrink-0 transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+                                <img src="/gallery/image4.webp" alt="Gallery Image 3"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <div
+                                class="overflow-hidden rounded-lg shadow-lg w-[300px] h-[300px] flex-shrink-0 transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+                                <img src="/gallery/image7.jpg" alt="Gallery Image 4" class="w-full h-full object-cover">
+                            </div>
+                            <div
+                                class="overflow-hidden rounded-lg shadow-lg w-[300px] h-[300px] flex-shrink-0 transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+                                <img src="/gallery/image3.webp" alt="Gallery Image 6"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <div
+                                class="overflow-hidden rounded-lg shadow-lg w-[300px] h-[300px] flex-shrink-0 transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+                                <img src="/gallery/image12.jpg" alt="Gallery Image 7"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <div
+                                class="overflow-hidden rounded-lg shadow-lg w-[300px] h-[300px] flex-shrink-0 transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+                                <img src="/gallery/image11.jpg" alt="Gallery Image 8"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <div
+                                class="overflow-hidden rounded-lg shadow-lg w-[300px] h-[300px] flex-shrink-0 transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+                                <img src="/gallery/image10.jpg" alt="Gallery Image 9"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <div
+                                class="overflow-hidden rounded-lg shadow-lg w-[300px] h-[300px] flex-shrink-0 transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+                                <img src="/gallery/image15.jpg" alt="Gallery Image 10"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <div
+                                class="overflow-hidden rounded-lg shadow-lg w-[300px] h-[300px] flex-shrink-0 transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+                                <img src="/gallery/img6.jpg" alt="Gallery Image 11" class="w-full h-full object-cover">
+                            </div>
+                            <div
+                                class="overflow-hidden rounded-lg shadow-lg w-[300px] h-[300px] flex-shrink-0 transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+                                <img src="/gallery/img15.jpg" alt="Gallery Image 12" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+
+                        <!-- Second Row -->
+                        <div id="galleryContainer" class="flex gap-6 whitespace-nowrap overflow-x-auto scroll-smooth">
+                            <!-- Images -->
+                            <div
+                                class="overflow-hidden rounded-lg shadow-lg w-[300px] h-[300px] flex-shrink-0 transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+                                <img src="/gallery/image5.jpg" alt="Gallery Image 1" class="w-full h-full object-cover">
+                            </div>
+                            <div
+                                class="overflow-hidden rounded-lg shadow-lg w-[300px] h-[300px] flex-shrink-0 transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+                                <img src="/gallery/img2.jpg" alt="Gallery Image 2" class="w-full h-full object-cover">
+                            </div>
+                            <div
+                                class="overflow-hidden rounded-lg shadow-lg w-[300px] h-[300px] flex-shrink-0 transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+                                <img src="/gallery/img3.jpg" alt="Gallery Image 3" class="w-full h-full object-cover">
+                            </div>
+                            <div
+                                class="overflow-hidden rounded-lg shadow-lg w-[300px] h-[300px] flex-shrink-0 transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+                                <img src="/gallery/img4.jpg" alt="Gallery Image 4" class="w-full h-full object-cover">
+                            </div>
+                            <div
+                                class="overflow-hidden rounded-lg shadow-lg w-[300px] h-[300px] flex-shrink-0 transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+                                <img src="/gallery/img5.jpg" alt="Gallery Image 5" class="w-full h-full object-cover">
+                            </div>
+                            <div
+                                class="overflow-hidden rounded-lg shadow-lg w-[300px] h-[300px] flex-shrink-0 transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+                                <img src="/gallery/image6.jpg" alt="Gallery Image 6" class="w-full h-full object-cover">
+                            </div>
+                            <div
+                                class="overflow-hidden rounded-lg shadow-lg w-[300px] h-[300px] flex-shrink-0 transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+                                <img src="/gallery/image14.jpg" alt="Gallery Image 7"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <div
+                                class="overflow-hidden rounded-lg shadow-lg w-[300px] h-[300px] flex-shrink-0 transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+                                <img src="/gallery/img9.jpg" alt="Gallery Image 8" class="w-full h-full object-cover">
+                            </div>
+                            <div
+                                class="overflow-hidden rounded-lg shadow-lg w-[300px] h-[300px] flex-shrink-0 transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+                                <img src="/gallery/image8.jpg" alt="Gallery Image 9" class="w-full h-full object-cover">
+                            </div>
+                            <div
+                                class="overflow-hidden rounded-lg shadow-lg w-[300px] h-[300px] flex-shrink-0 transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+                                <img src="/gallery/img8.jpg" alt="Gallery Image 10" class="w-full h-full object-cover">
+                            </div>
+                            <div
+                                class="overflow-hidden rounded-lg shadow-lg w-[300px] h-[300px] flex-shrink-0 transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+                                <img src="/gallery/img7.jpg" alt="Gallery Image 11" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+
+        </div>
+
+        <style>
+            
+            #galleryContainer {
+                scrollbar-width: none;
+                
+                -ms-overflow-style: none;
+                
+            }
+
+            #galleryContainer::-webkit-scrollbar {
+                width: 0;
+                height: 0;
+            }
+
+            
+            .group:hover #galleryContainer::-webkit-scrollbar {
+                height: 12px;
+            }
+
+            .group:hover #galleryContainer::-webkit-scrollbar-thumb {
+                background: #555;
+                border-radius: 10px;
+            }
+
+            .group:hover #galleryContainer::-webkit-scrollbar-thumb:hover {
+                background: #888;
+            }
+
+            .group:hover #galleryContainer::-webkit-scrollbar-track {
+                background: #f1f1f1;
+            }
+
+            
+            button {
+                transition: all 0.3s ease;
+            }
+
+            button:hover {
+                transform: scale(1.1);
+            }
+
+            
+            #galleryContainer {
+                width: calc((300px + 24px) * 4);
+                
+            }
+
+            
+            .hover\:scale-105:hover {
+                transform: scale(1.05);
+            }
+
+            .hover\:shadow-2xl:hover {
+                box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            }
+        </style>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
                 const scrollContainer = document.getElementById('galleryContainer');
                 const scrollLeftBtn = document.getElementById('scrollLeft');
                 const scrollRightBtn = document.getElementById('scrollRight');
-        
-                const scrollAmount = 324; // 300px (image width) + 24px (gap)
-        
-                scrollLeftBtn.addEventListener('click', () => {
-                    scrollContainer.scrollBy({
-                        left: -scrollAmount,
-                        behavior: 'smooth'
+                const menuBtn = document.getElementById('menu-btn');
+                const mobileMenu = document.getElementById('mobile-menu');
+
+                const scrollAmount = 324; 
+
+                if (menuBtn) {
+                    menuBtn.addEventListener('click', () => {
+                        if (mobileMenu) {
+                            mobileMenu.classList.toggle('hidden');
+                        }
                     });
-                });
-        
-                scrollRightBtn.addEventListener('click', () => {
-                    scrollContainer.scrollBy({
-                        left: scrollAmount,
-                        behavior: 'smooth'
+                }
+
+                // Scroll Right
+                if (scrollRightBtn && scrollContainer) {
+                    scrollRightBtn.addEventListener('click', () => {
+                        scrollContainer.scrollBy({
+                            left: scrollAmount,
+                            behavior: 'smooth',
+                        });
                     });
-                });
-            </script>
+                }
+
+                // Scroll Left
+                if (scrollLeftBtn && scrollContainer) {
+                    scrollLeftBtn.addEventListener('click', () => {
+                        scrollContainer.scrollBy({
+                            left: -scrollAmount,
+                            behavior: 'smooth',
+                        });
+                    });
+                }
+            });
+        </script>
         </section>
 
         <section id="contact" class="max-w-5xl mx-auto px-10 py-20 overflow-hidden">
@@ -789,7 +1277,8 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
 
                 <!-- Social Links Box -->
-                <div class="bg-gradient-to-br from-[#86A8E7] to-[#091540] p-6 rounded-lg shadow-lg hover:shadow-blue-500/50 transition duration-300 transform hover:scale-105">
+                <div
+                    class="bg-gradient-to-br from-[#86A8E7] to-[#091540] p-6 rounded-lg shadow-lg hover:shadow-blue-500/50 transition duration-300 transform hover:scale-105">
                     <h3 class="text-xl font-bold mb-5 text-white">🌐 Connect with Me</h3>
 
                     <div class="space-y-5">
@@ -821,6 +1310,15 @@
                             <span class="text-sm text-gray-300 group-hover:text-white transition">GitHub</span>
                         </a>
 
+                        <!-- for mobile no  -->
+                        <div class="flex items-center space-x-3 hover:text-gray-400 transition">
+                            <div class="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center shadow-md 
+                                    group-hover:scale-105 group-hover:bg-gray-600 transition duration-300">
+                                📞
+                            </div>
+                            <span class="text-sm text-gray-300 group-hover:text-white transition">+91 9303812205</span>
+                        </div>
+
                         <div class="flex items-center space-x-3">
                             <div class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center shadow-md">
                                 📍
@@ -832,45 +1330,102 @@
                 </div>
 
                 <!-- Contact Form Box -->
-                <div class="bg-gradient-to-br from-[#86A8E7] to-[#091540] p-6 rounded-lg shadow-lg hover:shadow-green-500/50 transition duration-300 transform hover:scale-105">
+                <div
+                    class="bg-gradient-to-br from-[#86A8E7] to-[#091540] p-6 rounded-lg shadow-lg hover:shadow-green-500/50 transition duration-300 transform hover:scale-105">
 
                     <h3 class="text-xl font-bold mb-5 text-white">✉️ Send a Message</h3>
-                
+
                     <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
                         <input type="hidden" name="access_key" value="be238c23-29f4-4567-b757-bf3c6fa5bd3d">
-                
+
                         <div class="flex space-x-4">
                             <input type="text" name="name" placeholder="Name" required
                                 class="w-1/2 p-3 bg-gray-800 text-white rounded-md outline-none focus:ring-2 focus:ring-blue-500 transition duration-300 hover:border-green-400 hover:shadow-md">
-                
+
                             <input type="email" name="email" placeholder="Email" required
                                 class="w-1/2 p-3 bg-gray-800 text-white rounded-md outline-none focus:ring-2 focus:ring-blue-500 transition duration-300 hover:border-green-400 hover:shadow-md">
                         </div>
-                
+
                         <textarea name="message" rows="4" placeholder="Message" required
                             class="w-full p-3 bg-gray-800 text-white rounded-md outline-none focus:ring-2 focus:ring-green-500 transition duration-300 hover:border-blue-400 hover:shadow-md"></textarea>
-                
+
                         <button type="submit"
                             class="w-full bg-gradient-to-r from-green-400 to-blue-500 hover:from-blue-500 hover:to-green-400 text-white font-bold py-3 rounded-md shadow-md transition duration-300 transform hover:scale-110 hover:shadow-green-500/60 text-sm">
                             🚀 Send
                         </button>
-                
-                        <!-- Success & Error Messages -->
+
+                       
                         <div id="form-status" class="hidden text-center mt-4"></div>
                     </form>
-                
-                </div>                
+
+                </div>
 
             </div>
         </section>
+        <footer class="text-white py-6 px-4 md:px-20 bg-black"
+            style="background: linear-gradient(to right, #2c003e, #001f3f);">
+            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-sm md:text-base">
+                <!-- Left: Branding & Socials -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 neon-text tracking-tight">PORTFOLIO</h3>
+                    <p class="opacity-80 mb-6 leading-relaxed">Building the future through code, collaboration, and
+                        community. Join the tech revolution!</p>
+                    <div class="flex gap-5 mt-4">
+                        <a href="https://github.com/Rishabh001pawar" target="_blank"
+                            class="hover:text-[#D81B60] transition-colors duration-300" aria-label="GitHub">
+                            <i data-feather="github" class="w-6 h-6"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/rishabh-farkade-91600a263" target="_blank"
+                            class="hover:text-[#00B0FF] transition-colors duration-300" aria-label="LinkedIn">
+                            <i data-feather="linkedin" class="w-6 h-6"></i>
+                        </a>
+                        <a href="https://www.instagram.com/_rishabh007_/" target="_blank"
+                            class="hover:text-[#E1306C] transition-colors duration-300" aria-label="Instagram">
+                            <i data-feather="instagram" class="w-6 h-6"></i>
+                        </a>
+                        <a href="rishabhpawar059@gmail.com" class="hover:text-green-400 transition-colors duration-300"
+                            aria-label="Email">
+                            <i data-feather="mail" class="w-6 h-6"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Middle: Quick Links -->
+                <div class="text-center md:text-left">
+                    <h4 class="text-lg font-semibold mb-4 text-[#D81B60]">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#home"
+                                class="hover:underline hover:text-[#00B0FF] transition-colors duration-200">Home</a>
+                        </li>
+                        <li><a href="#about"
+                                class="hover:underline hover:text-[#00B0FF] transition-colors duration-200">About</a>
+                        </li>
+                        <li><a href="#skills"
+                                class="hover:underline hover:text-[#00B0FF] transition-colors duration-200">Skills</a>
+                        </li>
+                        <li><a href="#projects"
+                                class="hover:underline hover:text-[#00B0FF] transition-colors duration-200">Projects</a>
+                        </li>
+                        <li><a href="#contact"
+                                class="hover:underline hover:text-[#00B0FF] transition-colors duration-200">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Divider & Copyright -->
+                <div class="border-t border-[#334155] mt-10 pt-6 text-center text-xs opacity-60">
+                    © 2025 • All Rights Reserved • Designed with <span class="text-red-500">♥</span> by 
+                    (Rishabh Farkade)
+                </div>
+        </footer>
         <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-        <script src="./script.js" type="module"></script>
-        <script src="./effect.js" type="module"></script>
+        <script src="/script.js" type="module"></script>
+        <script src="/effect.js" type="module"></script>
         <script>
             document.addEventListener('DOMContentLoaded', () => {
-              feather.replace();
+                feather.replace();
             });
-          </script>
+        </script>
 
 </body>
 

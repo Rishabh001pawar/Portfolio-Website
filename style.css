@@ -1,19 +1,18 @@
-/* @tailwind base;
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Smooth Theme Transition */
 body {
     transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* Dark Mode Styles */
+
 .dark {
     background: #121212;
     color: white;
 }
 
-/* Full-Screen Canvas Styling */
+
 html, body {
     margin: 0;
     padding: 0;
@@ -28,18 +27,18 @@ canvas {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%; /* Full viewport height, not document height */
-    pointer-events: none; /* Ensure canvas doesn't block clicks */
-    z-index: -10; /* Keeps canvas behind all content */
+    height: 100%; 
+    pointer-events: none; 
+    z-index: -10; 
 }
 
-/* Z-Index for Content Above Canvas */
+
 .content, .mt-6.flex.gap-4, .mt-5.flex.gap-3 {
     position: relative;
     z-index: 10;
 }
 
-/* Button Hover Effects */
+
 button {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -48,21 +47,20 @@ button:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Social Links */
+
 .social-link, button {
     position: relative;
     z-index: 10;
     cursor: pointer;
 }
 
-/* Dark Mode Toggle Button */
+
 #darkModeToggle {
     display: flex; /* Fixed 'position: flex' typo */
     z-index: 15;
     cursor: pointer;
 }
 
-/* Spacing for Cards with Uniform Gaps */
 .card-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
