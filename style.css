@@ -113,6 +113,24 @@ button:hover {
     100% { background-position: 0% 50%; }
   }
 
+  #mobile-menu {
+    transform-origin: top;
+    transform: scaleY(0);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    background: linear-gradient(to bottom, #0A192F, #1E3A8A);
+    border-bottom: 2px solid transparent;
+}
+#mobile-menu:not(.hidden) {
+    transform: scaleY(1);
+    opacity: 1;
+    pointer-events: auto;
+    display: flex;
+    border-bottom: 2px solid;
+    border-image: linear-gradient(to right, #00D4FF, #7C3AED) 1;
+}
+
   /* Animation Classes */
   .animate-text {
     animation: fadeSlideUp 0.8s ease-out forwards;

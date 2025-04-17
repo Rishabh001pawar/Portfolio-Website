@@ -101,124 +101,124 @@ animate();
 
 
 
- // Typing Effect with Flicker Trigger
- const heading = document.getElementById('typing-heading');
- const text = heading.textContent;
- heading.textContent = '';
- let i = 0;
- function type() {
-     if (i < text.length) {
-         heading.textContent += text.charAt(i);
-         i++;
-         setTimeout(type, 100);
-     } else {
-         heading.classList.add('flicker-active'); // Trigger flicker after typing
-     }
- }
- type();
+// // Typing Effect with Flicker Trigger
+// const heading = document.getElementById('typing-heading');
+// const text = heading.textContent;
+// heading.textContent = '';
+// let i = 0;
+// function type() {
+//      if (i < text.length) {
+//          heading.textContent += text.charAt(i);
+//          i++;
+//          setTimeout(type, 100);
+//      } else {
+//          heading.classList.add('flicker-active'); // Trigger flicker after typing
+//      }
+//  }
+//  type();
 
  // GSAP Scroll Animations
- gsap.registerPlugin(ScrollTrigger);
+//  gsap.registerPlugin(ScrollTrigger);
 
- // Header Neon Glow
- gsap.to('.neon-glow', {
-     scrollTrigger: {
-         trigger: '.neon-glow',
-         start: 'top 80%',
-         end: 'bottom 20%',
-         toggleActions: 'play reverse play reverse', // Replay on scroll up/down
-     },
-     boxShadow: '0 0 20px rgba(139, 92, 246, 0.8), 0 0 40px rgba(139, 92, 246, 0.6)',
-     scale: 1.05,
-     duration: 0.5,
-     ease: 'power2.inOut',
-     yoyo: true,
-     repeat: -1,
- });
+//  // Header Neon Glow
+//  gsap.to('.neon-glow', {
+//      scrollTrigger: {
+//          trigger: '.neon-glow',
+//          start: 'top 80%',
+//          end: 'bottom 20%',
+//          toggleActions: 'play reverse play reverse', // Replay on scroll up/down
+//      },
+//      boxShadow: '0 0 20px rgba(139, 92, 246, 0.8), 0 0 40px rgba(139, 92, 246, 0.6)',
+//      scale: 1.05,
+//      duration: 0.5,
+//      ease: 'power2.inOut',
+//      yoyo: true,
+//      repeat: -1,
+//  });
 
- // Heading Flicker and Scale
- gsap.to('#typing-heading', {
-     scrollTrigger: {
-         trigger: '#typing-heading',
-         start: 'top 80%',
-         end: 'bottom 20%',
-         toggleActions: 'play reverse play reverse',
-     },
-     scale: 1.03,
-     duration: 0.3,
-     ease: 'power2.inOut',
-     yoyo: true,
-     repeat: -1,
- });
+//  // Heading Flicker and Scale
+//  gsap.to('#typing-heading', {
+//      scrollTrigger: {
+//          trigger: '#typing-heading',
+//          start: 'top 80%',
+//          end: 'bottom 20%',
+//          toggleActions: 'play reverse play reverse',
+//      },
+//      scale: 1.03,
+//      duration: 0.3,
+//      ease: 'power2.inOut',
+//      yoyo: true,
+//      repeat: -1,
+//  });
 
- // Paragraph Slide-Up and Color Shift
- document.querySelectorAll('.animate-paragraph').forEach((el, index) => {
-     gsap.fromTo(el, {
-         opacity: 0,
-         y: 50,
-     }, {
-         scrollTrigger: {
-             trigger: el,
-             start: 'top 80%',
-             end: 'bottom 20%',
-             toggleActions: 'play reverse play reverse',
-         },
-         opacity: 1,
-         y: 0,
-         duration: 1,
-         ease: 'power2.out',
-         delay: index * 0.2,
-     });
+//  // Paragraph Slide-Up and Color Shift
+//  document.querySelectorAll('.animate-paragraph').forEach((el, index) => {
+//      gsap.fromTo(el, {
+//          opacity: 0,
+//          y: 50,
+//      }, {
+//          scrollTrigger: {
+//              trigger: el,
+//              start: 'top 80%',
+//              end: 'bottom 20%',
+//              toggleActions: 'play reverse play reverse',
+//          },
+//          opacity: 1,
+//          y: 0,
+//          duration: 1,
+//          ease: 'power2.out',
+//          delay: index * 0.2,
+//      });
 
-     // Color Shift for Highlighted Text
-     gsap.to(el.querySelectorAll('.color-shift'), {
-         scrollTrigger: {
-             trigger: el,
-             start: 'top 80%',
-             end: 'bottom 20%',
-             toggleActions: 'play reverse play reverse',
-         },
-         keyframes: {
-             color: ['#facc15', '#ec4899', '#3b82f6', '#facc15'],
-         },
-         duration: 3,
-         ease: 'none',
-         repeat: -1,
-     });
- });
+//      // Color Shift for Highlighted Text
+//      gsap.to(el.querySelectorAll('.color-shift'), {
+//          scrollTrigger: {
+//              trigger: el,
+//              start: 'top 80%',
+//              end: 'bottom 20%',
+//              toggleActions: 'play reverse play reverse',
+//          },
+//          keyframes: {
+//              color: ['#facc15', '#ec4899', '#3b82f6', '#facc15'],
+//          },
+//          duration: 3,
+//          ease: 'none',
+//          repeat: -1,
+//      });
+//  });
 
- // Flip Cards Scale and Glow
- document.querySelectorAll('.animate-on-scroll').forEach((el) => {
-     gsap.to(el, {
-         scrollTrigger: {
-             trigger: el,
-             start: 'top 80%',
-             end: 'bottom 20%',
-             toggleActions: 'play reverse play reverse',
-         },
-         scale: 1.05,
-         boxShadow: '0 0 15px rgba(139, 92, 246, 0.7)',
-         duration: 0.5,
-         ease: 'power2.inOut',
-         yoyo: true,
-         repeat: -1,
-     });
- });
+//  // Flip Cards Scale and Glow
+//  document.querySelectorAll('.animate-on-scroll').forEach((el) => {
+//      gsap.to(el, {
+//          scrollTrigger: {
+//              trigger: el,
+//              start: 'top 80%',
+//              end: 'bottom 20%',
+//              toggleActions: 'play reverse play reverse',
+//          },
+//          scale: 1.05,
+//          boxShadow: '0 0 15px rgba(139, 92, 246, 0.7)',
+//          duration: 0.5,
+//          ease: 'power2.inOut',
+//          yoyo: true,
+//          repeat: -1,
+//      });
+//  });
 
- // Skill Progress Bars with Shimmer
- document.querySelectorAll('[data-skill]').forEach((bar) => {
-     gsap.to(bar, {
-         scrollTrigger: {
-             trigger: bar,
-             start: 'top 80%',
-             end: 'bottom 20%',
-             toggleActions: 'play reverse play reverse',
-         },
-         width: `${bar.dataset.skill}%`,
-         duration: 1.5,
-         ease: 'power2.out',
-     });
- });
+//  // Skill Progress Bars with Shimmer
+//  document.querySelectorAll('[data-skill]').forEach((bar) => {
+//      gsap.to(bar, {
+//          scrollTrigger: {
+//              trigger: bar,
+//              start: 'top 80%',
+//              end: 'bottom 20%',
+//              toggleActions: 'play reverse play reverse',
+//          },
+//          width: `${bar.dataset.skill}%`,
+//          duration: 1.5,
+//          ease: 'power2.out',
+//      });
+//  });
 
  // Particles.js with Scroll-Driven Speed
  let particleConfig = {
